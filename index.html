@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groco</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> groco</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#features">features</a>
+            <a href="#products">products</a>
+            <a href="#categories">categories</a>
+            <a href="#review">review</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="./images/img-1.jpg" alt="">
+                <div class="content">
+                    <h3>watermelon</h3>
+                    <span class="price">$4.99/-</span>
+                    <span class="quantity">qty : 1/-</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="./images/img-2.jpg" alt="">
+                <div class="content">
+                    <h3>onion</h3>
+                    <span class="price">$4.99/-</span>
+                    <span class="quantity">qty : 1/-</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="./images/img-3.jpg" alt="">
+                <div class="content">
+                    <h3>chicken</h3>
+                    <span class="price">$4.99/-</span>
+                    <span class="quantity">qty : 1/-</span>
+                </div>
+            </div>
+            <div class="total">total : $19.69/-</div>
+            <a href="#" class="btn">checkout</a>
+        </div>
+
+        <form action="" class="login-form">
+            <h3>login now</h3>
+            <input type="email" placeholder="your email" class="box">
+            <input type="password" placeholder="your password" class="box">
+            <p>forget your password <a href="#">click here</a></p>
+            <p>don't have an account <a href="#">create now</a></p>
+            <input type="submit" value="login now" class="btn">
+        </form>
+
+    </header>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>fresh and <span>organic</span> products for you</h3>
+            <p>Discover farm-fresh groceries delivered straight to your doorstep. Healthy living starts with Groco.</p>
+            <a href="#" class="btn">shop now</a>
+        </div>
+    </section>
+
+
+    <section class="features" id="features">
+
+        <h1 class="heading"> our <span>features</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="./images/img-5.png" alt="">
+                <h3>fresh and organic</h3>
+                <p>Only naturally grown produce, free from chemicals and preservatives.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <img src="./images/img-6.jpg" alt="">
+                <h3>free delivery</h3>
+                <p>Get your groceries delivered for free with orders over $20.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <img src="./images/img-7.jpg" alt="">
+                <h3>easy payments</h3>
+                <p>Secure and flexible payment options to make checkout a breeze.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="products" id="products">
+
+        <h1 class="heading"> our <span>products</span></h1>
+        
+        <div class="swiper product-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="images/img-8.png" alt="">
+                    <h3>fresh orange</h3>
+                    <div class="price">$4.99/- - $10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/img-9.png" alt="">
+                    <h3>fresh onion</h3>
+                    <div class="price">$4.99/- - $10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/img-10.png" alt="">
+                    <h3>fresh meat</h3>
+                    <div class="price">$4.99/- - $10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/img-11.png" alt="">
+                    <h3>fresh cabbage</h3>
+                    <div class="price">$4.99/- - $10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                
+
+            </div>
+
+        </div>
+
+        <div class="swiper product-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="images/img-12.jpg" alt="">
+                    <h3>fresh potato</h3>
+                    <div class="price">$4.99/- - $10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/img-13.png" alt="">
+                    <h3>fresh avocado</h3>
+                    <div class="price">$4.99/- - $10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/img-14.jpg" alt="">
+                    <h3>fresh carrot</h3>
+                    <div class="price">$4.99/- - $10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/img-15.jpg" alt="">
+                    <h3>green lemon</h3>
+                    <div class="price">$4.99/- - $10.99/-</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+
+                
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="categories" id="categories">
+
+        <h1 class="heading"> products <span>categories</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="./images/img-16.png" alt="">
+                <h3>vegitables</h3>
+                <p>Save up to 50% on farm fresh greens</p>
+                <a href="#" class="btn">shop now</a>
+            </div>
+
+            <div class="box">
+                <img src="./images/img-17.png" alt="">
+                <h3>fresh fruits</h3>
+                <p>Juicy, ripe, and naturally sweet fruits</p>
+                <a href="#" class="btn">shop now</a>
+            </div>
+
+            <div class="box">
+                <img src="./images/img-18.png" alt="">
+                <h3>dairy products</h3>
+                <p>Pure and fresh dairy straight from local farms</p>
+                <a href="#" class="btn">shop now</a>
+            </div>
+
+            <div class="box">
+                <img src="./images/img-19.png" alt="">
+                <h3>fresh meat</h3>
+                <p>Top-quality cuts sourced responsibly</p>
+                <a href="#" class="btn">shop now</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="review" id="review">
+
+        <h1 class="heading"> customer's <span>review</span> </h1>
+
+        <div class="swiper review-slider">
+
+            <div class="swiper-wrapper ">
+
+                <div class="swiper-slide box">
+                    <img src="./images/img-20.jpg" alt="">
+                    <p>Groco always delivers fresh produce. The service is quick, reliable, and I love the easy shopping experience.</p>
+                    <h3>david lee</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="./images/img-21.jpg" alt="">
+                    <p>The vegetables are fresh, delivery is fast, and customer support is friendly. Groco is my top choice now!</p>
+                    <h3>Emma johnson</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="./images/img-22.jpg" alt="">
+                    <p>I’m impressed by Groco’s quality. Everything arrives fresh, and the whole process is smooth  every time.</p>
+                    <h3>Sophia Martinez</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="./images/img-23.jpg" alt="">
+                    <p>Groco is reliable, affordable, and delivers fresh groceries right to my door. It’s my favorite store online.</p>
+                    <h3>john deo</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="blogs" id="blogs">
+
+        <h1 class="heading"> our <span>blogs</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="./images/img-24.jpg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-user"></i> by user </a>
+                        <a href="#"> <i class="fas fa-calendar"></i> 20th may, 2025 </a>
+                    </div>
+                    <h3>Why organic food is worth buying</h3>
+                    <p>Organic food helps you stay healthy naturally.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./images/img-26.jpg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-user"></i> by user </a>
+                        <a href="#"> <i class="fas fa-calendar"></i> 20th may, 2025 </a>
+                    </div>
+                    <h3>Top recipes using fresh vegetables only</h3>
+                    <p>Make meals using Groco’s freshest picks.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./images/img-25.jpg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-user"></i> by user </a>
+                        <a href="#"> <i class="fas fa-calendar"></i> 20th may, 2025 </a>
+                    </div>
+                    <h3>Keep produce fresh with these quick tips</h3>
+                    <p>Simple ways to store your food better.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3> groco <i class="fas fa-shopping-basket"></i> </h3>
+                <p>Your trusted source for fresh, organic groceries delivered to your doorstep.</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+               <a href="#" class="links" > <i class="fas fa-phone"></i> +123-456-7890 </a>
+               <a href="#" class="links" > <i class="fas fa-phone"></i> +111-222-3333 </a>
+               <a href="#" class="links" > <i class="fas fa-envelope"></i> havilahadekanye@gmail.com </a>
+               <a href="#" class="links" > <i class="fas fa-map-marker-alt"></i> lagos, nigeria - 400104</a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+               <a href="#" class="links" > <i class="fas fa-arrow-right"></i> home </a>
+               <a href="#" class="links" > <i class="fas fa-arrow-right"></i> features </a>
+               <a href="#" class="links" > <i class="fas fa-arrow-right"></i> products </a>
+               <a href="#" class="links" > <i class="fas fa-arrow-right"></i> categories </a>
+               <a href="#" class="links" > <i class="fas fa-arrow-right"></i> review </a>
+               <a href="#" class="links" > <i class="fas fa-arrow-right"></i> blogs </a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <input type="email" placeholder="your email"  class="email">
+                <input type="submit" value="subscribe" class="btn">
+            </div>
+
+        </div>
+
+
+        <div class="credits"> created by <span> adekanye havilah</span> | all rights reserved </div>
+
+    </section>
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<script src="./js/script.js"></script>
+
+
+</html>
