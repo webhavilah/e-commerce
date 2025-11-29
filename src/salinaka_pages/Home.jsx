@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div>
         <div className="home">
-           <div className="flex w-[85%] bg-[#f3f3f3] m-auto ">
+           <div className="flex w-[85%] bg-[#f3f3f3] m-auto mt-30 ">
            <div className="w-[50%] text-[#1a1a1a] my-auto pl-10 pt-20 pb-10">
               <h2 className='text-[50px] max-w-sm leading-14 mb-6 '><span className='capitalize font-medium'>see</span> everything with <span className='capitalize font-medium'>clarity</span></h2>
               <p className='text-md text-[#4a4a4a] font-semibold  w-md mb-4'>Buying eyewear should leave you happy and good-looking, with money in your pocket. Glasses, sunglasses, and contacts—we’ve got your eyes covered.</p>
