@@ -11,10 +11,10 @@ function Navbar() {
             <div className="w-[50%]">
                 <ul className='flex  items-center '>
                     <Link to='/home'><img src={logo} className='h-[50px]' alt="" /></Link>
-                    <li className='text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5'><Link to='/'>Home</Link></li>
-                    <li className='text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5'><Link to='/shop'>Shop</Link></li>
-                    <li className='text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5'><Link to='/featured'>Featured</Link></li>
-                    <li className='text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5'>Recommended</li>
+                    <li className='text-sm font-semibold hover:bg-[#F5F5F5] px-5 transition py-2.5'><Link to='/'>Home</Link></li>
+                    <li className='text-sm text-[#8E8E8E] font-semibold hover:bg-[#F5F5F5] px-5 transition py-2.5'><Link to='/shop'>Shop</Link></li>
+                    <li className='text-sm text-[#8E8E8E] font-semibold hover:bg-[#F5F5F5] px-5 transition py-2.5'><Link to='/featured'>Featured</Link></li>
+                    <li className='text-sm text-[#8E8E8E] font-semibold hover:bg-[#F5F5F5] px-5 transition py-2.5'>Recommended</li>
                 </ul>
             </div>
             <div className="flex w-[50%] justify-between">
@@ -23,7 +23,7 @@ function Navbar() {
                         <IoIosSearch className='text-lg'/>
                         <input type="text" className=' placeholder:text-[13px] pr-15 focus:ring-0 focus:border-transparent focus:outline-none' placeholder='Search product...'/>
                     </div>
-                   <div className="hover:bg-[#0000000e] text-center py-2.5 px-4 ">
+                   <div className="hover:bg-[#F2F2F2] text-center py-2.5 px-4 ">
                    <AiOutlineShopping className='text-2xl text-black '/>
                    </div>
                 </div>
