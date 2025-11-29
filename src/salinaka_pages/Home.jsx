@@ -16,7 +16,7 @@ const Home = () => {
               <button className='flex items-center justify-between bg-black text-white py-4 px-4 font-medium hover:bg-neutral-800 transition duration-400'>Shop Now <FaArrowRight className='ml-2'/></button>
             </div>
             <div className="w-[50%] ">
-            <img src={image} style={imageStyle} className= 'border ml-10' alt="salinaka's image" />
+            <img src={image} style={imageStyle} className= '' alt="salinaka's image" />
             </div>
            </div>
         </div>
