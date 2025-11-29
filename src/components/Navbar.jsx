@@ -23,7 +23,7 @@ function Navbar() {
                         <IoIosSearch className='text-lg'/>
                         <input type="text" className=' placeholder:text-[13px] pr-15 focus:ring-0 focus:border-transparent focus:outline-none' placeholder='Search product...'/>
                     </div>
-                   <div className="hover:bg-[#0000000e] text-center py-2.5 px-4 ">
+                   <div className="hover:bg-[#F2F2F2] text-center py-2.5 px-4 ">
                    <AiOutlineShopping className='text-2xl text-black '/>
                    </div>
                 </div>

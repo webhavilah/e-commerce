@@ -1,6 +1,6 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from './salinaka_pages/Navbar'
+import Navbar from './components/Navbar'
 import Home from './salinaka_pages/Home'
 import Shop from './salinaka_pages/Shop'
 import Featured from './salinaka_pages/Featured'
