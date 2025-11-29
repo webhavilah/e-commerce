@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../assets/salinaka-logo.png'
 import { IoIosSearch } from "react-icons/io";
 import { AiOutlineShopping } from "react-icons/ai";
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 function Navbar() {
   return (
@@ -11,10 +11,10 @@ function Navbar() {
             <div className="w-[50%]">
                 <ul className='flex  items-center '>
                     <Link to='/home'><img src={logo} className='h-[50px]' alt="" /></Link>
-                    <li className='text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5'><Link to='/'>Home</Link></li>
-                    <li className='text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5'><Link to='/shop'>Shop</Link></li>
-                    <li className='text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5'><Link to='/featured'>Featured</Link></li>
-                    <li className='text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5'>Recommended</li>
+                    <NavLink className={({isActive}) =>  `${isActive ? ' text-black' : 'text-gray-500'} text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`} to='/'>Home</NavLink>
+                    <NavLink className={({isActive}) =>  `${isActive ? ' text-black' : 'text-gray-500'} text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`} to='/shop'>Shop</NavLink>
+                    <NavLink className={({isActive}) =>  `${isActive ? ' text-black' : 'text-gray-500'} text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`} to='/featured'>Featured</NavLink>
+                    <NavLink className={({isActive}) =>  `${isActive ? ' text-black' : 'text-gray-500'} text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`}  to='/recommended'>Recommended</NavLink>
                 </ul>
             </div>
             <div className="flex w-[50%] justify-between">
