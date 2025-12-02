@@ -39,9 +39,9 @@ useEffect(() => {
                   isActive ? " text-black" : "text-gray-500"
                 } text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`
               }
-              to="/shop"
+              to="/"
             >
-              Shop
+              Home
             </NavLink>
             <NavLink
               className={({ isActive }) =>
@@ -49,9 +49,9 @@ useEffect(() => {
                   isActive ? " text-black" : "text-gray-500"
                 } text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`
               }
-              to="/"
+              to="/shop"
             >
-              Home
+              Shop
             </NavLink>
             <NavLink
               className={({ isActive }) =>
