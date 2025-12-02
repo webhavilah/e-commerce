@@ -11,8 +11,8 @@ function Navbar() {
             <div className="w-[50%]">
                 <ul className='flex  items-center '>
                     <Link to='/'><img src={logo} className='h-[50px]' alt="" /></Link>
-                    <NavLink className={({isActive}) => `${isActive ? ' text-black' : 'text-gray-500'} text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`} to='/shop'>Shop</NavLink>
                     <NavLink className={({isActive}) => `${isActive ? ' text-black' : 'text-gray-500'} text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`} to='/'>Home</NavLink>
+                    <NavLink className={({isActive}) => `${isActive ? ' text-black' : 'text-gray-500'} text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`} to='/shop'>Shop</NavLink>
                     <NavLink className={({isActive}) => `${isActive ? ' text-black' : 'text-gray-500'} text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`} to='/featured'>Featured</NavLink>
                     <NavLink className={({isActive}) => `${isActive ? ' text-black' : 'text-gray-500'} text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`} to='/recommended'>Recommended</NavLink>
                 </ul>
