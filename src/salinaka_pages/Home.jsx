@@ -2,7 +2,6 @@ import React from 'react'
 import { FaArrowRight } from "react-icons/fa6";
 import image from '../assets/salinaka image.png'
 import data from '../consumable/featured'
-// import imageOne from "../../../../Pictures/Screenshots/Screenshot 2025-11-22 202437.png"
 
 const Home = () => {
   const imageStyle = {
@@ -45,7 +44,6 @@ const Home = () => {
               })
             }
           </div>
-          {/* <img src={imageOne} alt="" /> */}
         </div>
     </div>
   )
