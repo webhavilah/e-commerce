@@ -18,7 +18,7 @@ function App() {
           <Route path='/featured' element={<Featured/>}> </Route>
           <Route path='/recommended' element={<Recommended/>}> </Route>
           <Route path='/signup' element={<Signup/>}></Route>
-          <Route path='/signIn' element={<SignIn/>}></Route>
+          <Route path='/signin' element={<SignIn/>}></Route>
         </Routes>
 
     </Router>

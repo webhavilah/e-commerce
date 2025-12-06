@@ -3,6 +3,7 @@ import logo from "../assets/salinaka-logo.png";
 import { IoIosSearch } from "react-icons/io";
 import { AiOutlineShopping } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
+import { handleScroll } from "../utils/handleScroll";
 export const SignIn = () => {
       
 const navbar = useRef(null);
@@ -93,7 +94,9 @@ className="h-30 fixed w-full  flex items-center justify-center top-0 z-10"
     </div>
     <div className=" w-[30%] flex items-center space-x-3.5 justify-center">
       <Link to='/signup'>
-      <button className="bg-black text-white text-[12px] font-semibold py-2.5 px-4 hover:bg-neutral-800 transition duration-400">
+      <button 
+      onClick={handleScroll()}
+        className="bg-black text-white text-[12px] font-semibold py-2.5 px-4 hover:bg-neutral-800 transition duration-400">
         Sign Up
       </button>
       </Link>
@@ -106,7 +109,7 @@ className="h-30 fixed w-full  flex items-center justify-center top-0 z-10"
   </div>
 </nav>
 </header>
-Signup
+Signin page
 </div>
 
   )

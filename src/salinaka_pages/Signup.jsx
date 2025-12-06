@@ -2,14 +2,14 @@ import React, { useEffect, useRef } from "react";
 import logo from "../assets/salinaka-logo.png";
 import { IoIosSearch } from "react-icons/io";
 import { AiOutlineShopping } from "react-icons/ai";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
 function Signup() {
-
+    const navigate = useNavigate()
     const navbar = useRef(null);
     useEffect(() => {
         const handleScroll = () => {
@@ -96,7 +96,7 @@ function Signup() {
               Sign Up
             </button>
             </Link> */}
-                            <Link to='/signIn'>
+                            <Link to='/signin'>
                                 <button className="bg-[#f2f2f2] text-gray-500 text-[12px] font-semibold py-[9px] px-4 border-gray-500 border hover:bg-white transition duration-400">
                                     Sign In
                                 </button>
@@ -106,7 +106,7 @@ function Signup() {
                 </nav>
             </header>
 
-            <div className="border border-purple-400 w-[60%] m-auto mt-28 ">
+            <div className="border border-gray-400 w-[60%] m-auto mt-28 ">
                 <div className="flex px-10 justify-between items-center">
                     <div className="w-[50%] ">
                         <h2 className="font-semibold text-2xl mt-7">Sign up to Salinaka</h2>
@@ -124,7 +124,7 @@ function Signup() {
                                 <input className=" border border-[#C5C5C5] py-1.5 pl-5 w-full focus:ring-0 focus: focus:outline-none placeholder:font-medium placeholder:text-[#9C9C9C]" type="password" placeholder="Your Password" />
                             </div>
                             <div className="">
-                                <button className='text-lg flex items-center ml-auto  my-5 bg-black text-[#F7FFFF] py-4 px-4 font-medium hover:bg-neutral-800 transition duration-400'><p className="blur-[0.5px]">Sign Up</p><FaArrowRight className='ml-2' /></button>
+                                <button className='text-lg flex items-center ml-auto  my-5   bg-black text-[#F7FFFF] py-2 px-4 font-medium hover:bg-neutral-800 transition duration-400'><p className="">Sign Up</p><FaArrowRight className='ml-2' /></button>
                             </div>
                         </form>
                     </div>
@@ -135,29 +135,32 @@ function Signup() {
                     </div>
                     <div className="m-auto flex flex-col gap-4">
                         <button className="flex items-center justify-center w-60 text-sm  py-3 gap-2 bg-[#0078FF] hover:bg-blue-600 text-[#F7FFFF] font-semibold  transition duration-200">
-                            <p className="flex items-center blur-[0.5px]">
+                            <p className="flex items-center ">
                                 <FaFacebookSquare className="w-3 h-3 right-4 relative" /> Continue with Facebook
                             </p>
                         </button>
 
                         <button className="flex items-center justify-center w-60 text-sm  py-3 gap-2 border bg-[#FFFFFF] border-[#C5C5C5] text-[#3A3A3A] font-semibold hover:bg-[#0000001d] transition duration-200">
-                            <p className="flex items-center blur-[0.5px]">
+                            <p className="flex items-center">
                                 <FaGoogle className="w- 3 h-3 ml-0 right-6 relative" /> Continue with Google
                             </p>
                         </button>
 
                         <button className="flex items-center justify-center w-60 text-sm  py-3 gap-2 border bg-[#24292E] text-[#ffffff] font-semibold hover:bg-[#31373c]  transition duration-200">
-                            <p className=" flex items-center blur-[0.5px]">
+                            <p className=" flex items-center ">
                                 <FaGithub className="w-3 h-3 right-6 relative" /> Continue with Github
                             </p>
                         </button>
                     </div>
-
-
                 </div>
                 <div className="bg-[#f2f2f2] flex py-3 justify-center items-center space-x-7">
                     <p className="text-sm font-medium">Already have an account?</p>
-                    <button className="bg-transparent border-[#f2f2f2]] text-gray-500 text-[12px] font-semibold py-[9px] px-4 border-gray-500 border hover:bg-[#0000000b] transition duration-400 hover:border-0 hover:py-2.5 ">
+                    <button
+                        onClick={() => {
+                            handleScroll()
+                            navigate('signin')
+                        }}
+                        className="bg-transparent border-[#f2f2f2]] text-gray-500 text-[12px] font-semibold py-[9px] px-4 border-gray-500 border hover:bg-[#0000000b] transition duration-400 hover:border-0 hover:py-2.5 ">
                         Sign In
                     </button>
                 </div>
