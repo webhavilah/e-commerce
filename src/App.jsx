@@ -7,6 +7,7 @@ import Featured from './salinaka_pages/Featured'
 import Recommended from './salinaka_pages/Recommended'
 import Signup from './salinaka_pages/Signup'
 import { SignIn } from './salinaka_pages/SignIn'
+import NotFound from './salinaka_pages/NotFound'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/recommended' element={<Recommended/>}> </Route>
           <Route path='/signup' element={<Signup/>}></Route>
           <Route path='/signin' element={<SignIn/>}></Route>
+          <Route path='/*' element={<NotFound/>}></Route>
         </Routes>
 
     </Router>
