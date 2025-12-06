@@ -2,11 +2,6 @@ import dataThree from "../consumable/featured-three";
 import imageTwo from "../assets/salinaka-f-image.png";
 
 const Featured = () => {
-  const imageStyle = {
-    width: "auto",
-    height: "100%",
-  };
-
   return (
     <div className="">
       <div className="flex w-[85%] bg-[#f3f3f3] m-auto mt-30 h-[400px] justify-between">
