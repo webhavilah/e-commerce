@@ -5,17 +5,20 @@ import Home from './salinaka_pages/Home'
 import Shop from './salinaka_pages/Shop'
 import Featured from './salinaka_pages/Featured'
 import Recommended from './salinaka_pages/Recommended'
+import Signup from './salinaka_pages/Signup'
+import { SignIn } from './salinaka_pages/SignIn'
 
 function App() {
   return (
     <Router>
 
-        <Navbar />
         <Routes>
           <Route path='/' element={<Home/>}> </Route>
           <Route path='/shop' element={<Shop/>}> </Route>
           <Route path='/featured' element={<Featured/>}> </Route>
           <Route path='/recommended' element={<Recommended/>}> </Route>
+          <Route path='/signup' element={<Signup/>}></Route>
+          <Route path='/signIn' element={<SignIn/>}></Route>
         </Routes>
 
     </Router>
