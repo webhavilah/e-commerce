@@ -124,7 +124,7 @@ function Signup() {
                                 <input className=" border border-[#C5C5C5] py-1.5 pl-5 w-full focus:ring-0 focus: focus:outline-none placeholder:font-medium placeholder:text-[#9C9C9C]" type="password" placeholder="Your Password" />
                             </div>
                             <div className="">
-                                <button className='text-lg flex items-center ml-auto  my-5   bg-black text-[#F7FFFF] py-2 px-4 font-medium hover:bg-neutral-800 transition duration-400'><p className="">Sign Up</p><FaArrowRight className='ml-2' /></button>
+                                <button className='text-lg flex items-center ml-auto  my-5 bg-black text-[#F7FFFF] py-2 px-4 font-medium hover:bg-neutral-800 transition duration-400'><p className="">Sign Up</p><FaArrowRight className='ml-2' /></button>
                             </div>
                         </form>
                     </div>
