@@ -2,6 +2,8 @@ import React from 'react'
 import { FaArrowRight } from "react-icons/fa6";
 import image from '../assets/salinaka image.png'
 import data from '../consumable/featured'
+import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
   const imageStyle = {
@@ -9,12 +11,16 @@ const Home = () => {
   }
   return (
     <div>
+        <Navbar />
+
         <div className="home">
            <div className="flex w-[85%] bg-[#f3f3f3] m-auto mt-30 ">
            <div className="w-[50%] text-[#1a1a1a] my-auto pl-10 pt-20 pb-10">
               <h2 className='text-[50px] max-w-sm leading-14 mb-6 '><span className='capitalize font-medium'>see</span> everything with <span className='capitalize font-medium'>clarity</span></h2>
               <p className='text-md text-[#4a4a4a] font-semibold  w-md mb-4'>Buying eyewear should leave you happy and good-looking, with money in your pocket. Glasses, sunglasses, and contacts—we’ve got your eyes covered.</p>
-              <button className='flex items-center justify-between bg-black text-white py-4 px-4 font-medium hover:bg-neutral-800 transition duration-400'>Shop Now <FaArrowRight className='ml-2'/></button>
+              <Link to='/shop'>
+                <button className='flex items-center justify-between bg-black text-white py-4 px-4 font-medium hover:bg-neutral-800 transition duration-400'>Shop Now <FaArrowRight className='ml-2'/></button>
+              </Link>
             </div>
             <div className="w-[50%] ">
             <img src={image} style={imageStyle} className= '' alt="salinaka's image" />

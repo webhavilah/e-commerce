@@ -25,7 +25,7 @@ useEffect(() => {
   return (
     <header
       ref={navbar}
-      className="h-30 fixed w-full  flex items-center justify-center top-0 "
+      className="h-30 fixed w-full  flex items-center justify-center top-0 z-10"
     >
       <nav className="flex justify-center items-center w-[95%]">
         <div className="w-[50%]">
@@ -90,12 +90,16 @@ useEffect(() => {
             </div>
           </div>
           <div className=" w-[40%] flex items-center space-x-3.5 justify-center">
+            <Link to='/signup'>
             <button className="bg-black text-white text-[12px] font-semibold py-2.5 px-4 hover:bg-neutral-800 transition duration-400">
               Sign Up
             </button>
-            <button className="bg-[#f2f2f2] text-gray-500 text-[12px] font-semibold py-[9px] px-4 border-gray-500 border hover:bg-white transition duration-400">
+            </Link>
+           <Link to='/signIn'>
+           <button className="bg-[#f2f2f2] text-gray-500 text-[12px] font-semibold py-[9px] px-4 border-gray-500 border hover:bg-white transition duration-400">
               Sign In
             </button>
+           </Link>
           </div>
         </div>
       </nav>
