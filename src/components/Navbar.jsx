@@ -25,7 +25,7 @@ useEffect(() => {
   return (
     <header
       ref={navbar}
-      className="h-30 fixed w-full  flex items-center justify-center top-0 "
+      className="h-30 fixed w-full z-50  flex items-center justify-center top-0 "
     >
       <nav className="flex justify-center items-center w-[95%]">
         <div className="w-[50%]">

@@ -1,9 +1,11 @@
 import dataThree from "../consumable/featured-three";
 import imageTwo from "../assets/salinaka-f-image.png";
+import Navbar from "../components/Navbar";
 
 const Featured = () => {
   return (
     <div className="">
+      <Navbar />
       <div className="flex w-[85%] bg-[#f3f3f3] m-auto mt-30 h-[400px] justify-between">
         <div className="w-[65%] text-[#1a1a1a] my-auto pl-10 pt-20 pb-10">
           <h2 className="text-[50px] font-medium">Featured Products</h2>

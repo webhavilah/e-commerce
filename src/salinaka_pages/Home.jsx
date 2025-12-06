@@ -4,6 +4,7 @@ import logo from "../assets/salinaka-logo.png";
 import image from "../assets/salinaka image.png";
 import data from "../consumable/featured";
 import dataTwo from "../consumable/featured-two";
+import Navbar from "../components/Navbar";
 
 const Home = () => {
   const imageStyle = {
@@ -12,6 +13,7 @@ const Home = () => {
   };
   return (
     <div>
+      <Navbar />
       <div className="home">
         <div className="flex w-[85%] bg-[#f3f3f3] m-auto mt-30 ">
           <div className="w-[50%] text-[#1a1a1a] my-auto pl-10 pt-20 pb-10">
