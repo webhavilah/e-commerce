@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
+import logo from "../assets/salinaka-logo.png";
 import image from "../assets/salinaka image.png";
 import data from "../consumable/featured";
 import dataTwo from "../consumable/featured-two";
@@ -27,7 +28,7 @@ const Home = () => {
               Shop Now <FaArrowRight className="ml-2" />
             </button>
           </div>
-          <div className="w-[50%] ">
+          <div className="w-[50%]">
             <img
               src={image}
               style={imageStyle}
@@ -72,7 +73,7 @@ const Home = () => {
           })}
         </div>
       </div>
-      <div className=" w-[80%] m-auto mt-20 h-auto pb-80">
+      <div className=" w-[80%] m-auto mt-20 h-auto pb-100">
         <div className="flex w-full justify-between">
           <h1 className="text-black font-medium text-4xl pb-7">
             Recommended Products
@@ -105,6 +106,20 @@ const Home = () => {
               </div>
             );
           })}
+        </div>
+      </div>
+      <div className="bg-[#F0F0F0] h-46 flex w-full">
+        <div className="flex w-[93%] justify-between m-auto h-30 items-center">
+          <div className="">
+          <h4 className="text-[13px] text-[##4A4A4A]">Developed by <span className="underline font-medium"> JULIUS GUEVARRA</span></h4>
+        </div>
+        <div className="items-center h-full grid mr-10 px-10">
+          <img src={logo}  style={{width: "150px", paddingBottom: "20px"}} alt="" />
+          <p className="text-center font-medium">© 2025</p>
+        </div>
+        <div className="">
+          <h4 className="text-[13px] text-[##4A4A4A]">Fork this project  <span className="underline font-medium">HERE</span></h4>
+        </div>
         </div>
       </div>
     </div>
