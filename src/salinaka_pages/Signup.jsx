@@ -124,26 +124,32 @@ function Signup() {
                                 <input className=" border border-[#C5C5C5] py-1.5 pl-5 w-full focus:ring-0 focus: focus:outline-none placeholder:font-medium placeholder:text-[#9C9C9C]" type="password" placeholder="Your Password" />
                             </div>
                             <div className="">
-                                <button className='text-lg flex items-center ml-auto  my-5 bg-black text-[#F7FFFF] py-4 px-4 font-medium hover:bg-neutral-800 transition duration-400'>Sign Up<FaArrowRight className='ml-2' /></button>
+                                <button className='text-lg flex items-center ml-auto  my-5 bg-black text-[#F7FFFF] py-4 px-4 font-medium hover:bg-neutral-800 transition duration-400'><p className="blur-[0.5px]">Sign Up</p><FaArrowRight className='ml-2' /></button>
                             </div>
                         </form>
                     </div>
-                    <div className="mb-4">
-                        <div className="w-[0.1px] ml-3 bg-[#E1E1E1] h-20"></div>
-                        <p>OR</p>
-                        <div className="w-[0.1px] ml-3 bg-[#E1E1E1] h-20"></div>
+                    <div className="mb-4 ">
+                        <div className="w-[0.1px] m-auto bg-[#E1E1E1] h-20"></div>
+                        <p className="text-xs">OR</p>
+                        <div className="w-[0.1px] m-auto bg-[#E1E1E1] h-20"></div>
                     </div>
                     <div className="m-auto flex flex-col gap-4">
-                        <button className="flex items-center justify-center w-60 py-3 gap-2 bg-[#0078FF] hover:bg-blue-600 text-[#F7FFFF] font-semibold  transition duration-200">
-                            <FaFacebookSquare className="w-3 h-3 left-193 absolute" /> Continue with Facebook
+                        <button className="flex items-center justify-center w-60 text-sm  py-3 gap-2 bg-[#0078FF] hover:bg-blue-600 text-[#F7FFFF] font-semibold  transition duration-200">
+                            <p className="flex items-center blur-[0.5px]">
+                                <FaFacebookSquare className="w-3 h-3 right-4 relative" /> Continue with Facebook
+                            </p>
                         </button>
 
-                        <button className="flex items-center justify-center w-60 py-3 gap-2 border bg-[#FFFFFF] border-[#C5C5C5] text-[#3A3A3A] font-semibold hover:bg-[#0000001d] transition duration-200">
-                            <FaGoogle className="w- 3 h-3 ml-0 left-193 absolute" /> Continue with Google
+                        <button className="flex items-center justify-center w-60 text-sm  py-3 gap-2 border bg-[#FFFFFF] border-[#C5C5C5] text-[#3A3A3A] font-semibold hover:bg-[#0000001d] transition duration-200">
+                            <p className="flex items-center blur-[0.5px]">
+                                <FaGoogle className="w- 3 h-3 ml-0 right-6 relative" /> Continue with Google
+                            </p>
                         </button>
 
-                        <button className="flex items-center justify-center w-60 py-3 gap-2 border bg-[#24292E] text-[#C5C5C5] font-semibold hover:bg-[#31373c]  transition duration-200">
-                            <FaGithub className="w-3 h-3 left-193 absolute" /> Continue with Github
+                        <button className="flex items-center justify-center w-60 text-sm  py-3 gap-2 border bg-[#24292E] text-[#ffffff] font-semibold hover:bg-[#31373c]  transition duration-200">
+                            <p className=" flex items-center blur-[0.5px]">
+                                <FaGithub className="w-3 h-3 right-6 relative" /> Continue with Github
+                            </p>
                         </button>
                     </div>
 
