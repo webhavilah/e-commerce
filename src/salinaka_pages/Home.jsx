@@ -113,7 +113,7 @@ const Home = () => {
       <div className="bg-[#F0F0F0] h-46 flex w-full">
         <div className="flex w-[93%] justify-between m-auto h-30 items-center">
           <div className="">
-          <h4 className="text-[13px] text-[##4A4A4A]">Developed by <span className="underline font-medium"> JULIUS GUEVARRA</span></h4>
+          <h4 className="text-[13px] text-[##4A4A4A]">Developed by <span className="underline font-medium"> Ayanfe & HAVILAH</span></h4>
         </div>
         <div className="items-center h-full grid mr-10 px-10">
           <img src={logo}  style={{width: "150px", paddingBottom: "20px"}} alt="" />
