@@ -9,6 +9,7 @@ import Signup from './salinaka_pages/Signup'
 import { SignIn } from './salinaka_pages/SignIn'
 import ForgotPassword from './salinaka_pages/ForgotPassword'
 import NotFound from './salinaka_pages/NotFound'
+import Product from './salinaka_pages/Product'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/signin' element={<SignIn/>}></Route>
           <Route path='/forgot-password' element={<ForgotPassword/>}></Route>
           <Route path='/*' element={<NotFound/>}></Route>
+          <Route path='/product/:id' element={<Product/>}></Route>
         </Routes>
 
     </Router>
