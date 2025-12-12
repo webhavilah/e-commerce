@@ -2,41 +2,42 @@ import React, { useEffect, useRef } from "react";
 import logo from "../assets/salinaka-logo.png";
 import { IoIosSearch } from "react-icons/io";
 import { AiOutlineShopping } from "react-icons/ai";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { handleScroll } from "../utils/handleScroll";
 
 function Navbar() {
-    
-const navbar = useRef(null);
-useEffect(() => {
-  const handleScroll = () => {
-    if (navbar.current) {
-      if (window.scrollY < 50) {
-        navbar.current.classList.add("h-30" );
-        navbar.current.classList.remove("shadow-md", "h-[10%]", 'bg-white');
-      } else {
-         navbar.current.classList.add( "shadow-md","h-[10%]", 'bg-white');
-        navbar.current.classList.remove( "bg-red-500");
+  const navigate = useNavigate()
+  const navbar = useRef(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (navbar.current) {
+        if (window.scrollY < 50) {
+          navbar.current.classList.add("h-30");
+          navbar.current.classList.remove("shadow-md", "h-[10%]", 'bg-white');
+        } else {
+          navbar.current.classList.add("shadow-md", "h-[10%]", 'bg-white');
+          navbar.current.classList.remove("bg-red-500");
+        }
       }
-    }
-  };
-  window.addEventListener("scroll", handleScroll);
-  return ()=> window.removeEventListener("scroll", handleScroll);
-}, []);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <header
       ref={navbar}
-      className="h-30 fixed w-full  flex items-center justify-center top-0 z-10"
+      className="h-30 fixed w-full z-50  flex items-center justify-center top-0 "
     >
-      <nav className="flex justify-center items-center w-[95%]">
-        <div className="w-[50%]">
+      <nav className="flex justify-center items-center w-[94%]">
+        <div className="w-[60%]">
           <ul className="flex  items-center ">
             <Link to="/">
               <img src={logo} className="h-[50px]" alt="" />
             </Link>
             <NavLink
+            onClick={handleScroll}
               className={({ isActive }) =>
-                `${
-                  isActive ? " text-black" : "text-gray-500"
+                `${isActive ? " text-black" : "text-gray-500"
                 } text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`
               }
               to="/"
@@ -44,9 +45,9 @@ useEffect(() => {
               Home
             </NavLink>
             <NavLink
+            onClick={handleScroll}
               className={({ isActive }) =>
-                `${
-                  isActive ? " text-black" : "text-gray-500"
+                `${isActive ? " text-black" : "text-gray-500"
                 } text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`
               }
               to="/shop"
@@ -54,9 +55,9 @@ useEffect(() => {
               Shop
             </NavLink>
             <NavLink
+            onClick={handleScroll}
               className={({ isActive }) =>
-                `${
-                  isActive ? " text-black" : "text-gray-500"
+                `${isActive ? " text-black" : "text-gray-500"
                 } text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`
               }
               to="/featured"
@@ -64,9 +65,9 @@ useEffect(() => {
               Featured
             </NavLink>
             <NavLink
+            onClick={handleScroll}
               className={({ isActive }) =>
-                `${
-                  isActive ? " text-black" : "text-gray-500"
+                `${isActive ? " text-black" : "text-gray-500"
                 } text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`
               }
               to="/recommended"
@@ -77,7 +78,7 @@ useEffect(() => {
         </div>
         <div className="flex w-[50%] justify-between">
           <div className="flex items-center w-[60%]">
-            <div className="bg-white flex space-x-3 border border-gray-500 items-center px-4 py-2">
+            <div className="bg-white flex space-x-3 border border-[#E5E5E5] items-center px-4 py-2">
               <IoIosSearch className="text-lg" />
               <input
                 type="text"
@@ -89,17 +90,19 @@ useEffect(() => {
               <AiOutlineShopping className="text-2xl text-black " />
             </div>
           </div>
-          <div className=" w-[40%] flex items-center space-x-3.5 justify-center">
-            <Link to='/signup'>
-            <button className="bg-black text-white text-[12px] font-semibold py-2.5 px-4 hover:bg-neutral-800 transition duration-400">
+          <div className="w-[26%] flex items-center space-x-3.5 justify-between">
+            <button onClick={() => {
+              handleScroll()
+              navigate('/signup')
+            }} className="bg-black text-white text-[12px] font-semibold py-2.5 px-4 hover:bg-neutral-800 transition duration-400">
               Sign Up
             </button>
-            </Link>
-           <Link to='/signIn'>
-           <button className="bg-[#f2f2f2] text-gray-500 text-[12px] font-semibold py-[9px] px-4 border-gray-500 border hover:bg-white transition duration-400">
+            <button onClick={() => {
+              handleScroll()
+              navigate('/signin')
+            }} className="bg-[#f2f2f2] text-gray-500 text-[12px] font-semibold py-[9px] px-4 border border-[#DFDFDF] hover:bg-white transition duration-400">
               Sign In
             </button>
-           </Link>
           </div>
         </div>
       </nav>

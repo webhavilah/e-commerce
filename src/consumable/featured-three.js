@@ -1,4 +1,4 @@
-const featured = [
+const dataThree = [
     {
         id: 1,
         brand: "Burnikk",
@@ -33,7 +33,25 @@ const featured = [
         id: 6,
         brand: "Tiktilaok Manok",
         name: "Sexbomb",
-        imgUrl: "../src/assets/f-6.png",
+        imgUrl: "../src/assets/f-2.png",
+    },
+    {
+        id: 7,
+        brand: "Kutu",
+        name: "Sexbomb",
+        imgUrl: "../src/assets/f-1.png",
+    },
+    {
+        id: 8,
+        brand: "Quake Overload",
+        name: "Yezyow",
+        imgUrl: "../src/assets/p-5.png",
+    },
+    {
+        id: 9,
+        brand: "Adi",
+        name: "Sexbomb",
+        imgUrl: "../src/assets/f-3.png",
     }
-]
-export default featured;
+];
+export default dataThree;
