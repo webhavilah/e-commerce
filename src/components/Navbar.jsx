@@ -28,8 +28,8 @@ function Navbar() {
       ref={navbar}
       className="h-30 fixed w-full z-50  flex items-center justify-center top-0 "
     >
-      <nav className="flex justify-center items-center w-[95%]">
-        <div className="w-[50%]">
+      <nav className="flex justify-center items-center w-[94%]">
+        <div className="w-[60%]">
           <ul className="flex  items-center ">
             <Link to="/">
               <img src={logo} className="h-[50px]" alt="" />
@@ -78,7 +78,7 @@ function Navbar() {
         </div>
         <div className="flex w-[50%] justify-between">
           <div className="flex items-center w-[60%]">
-            <div className="bg-white flex space-x-3 border border-gray-500 items-center px-4 py-2">
+            <div className="bg-white flex space-x-3 border border-[#E5E5E5] items-center px-4 py-2">
               <IoIosSearch className="text-lg" />
               <input
                 type="text"
@@ -90,7 +90,7 @@ function Navbar() {
               <AiOutlineShopping className="text-2xl text-black " />
             </div>
           </div>
-          <div className=" w-[40%] flex items-center space-x-3.5 justify-center">
+          <div className="w-[26%] flex items-center space-x-3.5 justify-between">
             <button onClick={() => {
               handleScroll()
               navigate('/signup')
@@ -100,7 +100,7 @@ function Navbar() {
             <button onClick={() => {
               handleScroll()
               navigate('/signin')
-            }} className="bg-[#f2f2f2] text-gray-500 text-[12px] font-semibold py-[9px] px-4 border-gray-500 border hover:bg-white transition duration-400">
+            }} className="bg-[#f2f2f2] text-gray-500 text-[12px] font-semibold py-[9px] px-4 border border-[#DFDFDF] hover:bg-white transition duration-400">
               Sign In
             </button>
           </div>

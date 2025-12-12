@@ -5,9 +5,9 @@ import image from "../assets/salinaka image.png";
 import data from "../consumable/featured";
 import dataTwo from "../consumable/featured-two";
 import Navbar from "../components/Navbar";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import HomeProduct from "../components/HomeProduct";
-
+ 
 const Home = () => {
   const imageStyle = {
     height: "100%",
@@ -37,9 +37,11 @@ const Home = () => {
               in your pocket. Glasses, sunglasses, and contacts—we’ve got your
               eyes covered.
             </p>
-            <button className="flex items-center justify-between bg-black text-white py-4 px-4 font-medium hover:bg-neutral-800 transition duration-400">
-              Shop Now <FaArrowRight className="ml-2" />
-            </button>
+            <Link to="/shop">
+              <button className="flex items-center justify-between bg-black text-white py-4 px-4 font-medium hover:bg-neutral-800 transition duration-400">
+                Shop Now <FaArrowRight className="ml-2" />
+              </button>
+            </Link>
           </div>
           <div className="w-[50%]">
             <img
@@ -91,7 +93,7 @@ const Home = () => {
       <div className="bg-[#F0F0F0] h-46 flex w-full">
         <div className="flex w-[93%] justify-between m-auto h-30 items-center">
           <div className="">
-          <h4 className="text-[13px] text-[##4A4A4A]">Developed by <span className="underline font-medium"> JULIUS GUEVARRA</span></h4>
+          <h4 className="text-[13px] text-[##4A4A4A]">Developed by <span className="underline font-medium"> Ayanfe & HAVILAH</span></h4>
         </div>
         <div className="items-center h-full grid mr-10 px-10">
           <img src={logo}  style={{width: "150px", paddingBottom: "20px"}} alt="" />

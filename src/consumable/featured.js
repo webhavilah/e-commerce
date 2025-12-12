@@ -36,4 +36,4 @@ const featured = [
         imgUrl: "../src/assets/f-6.png",
     }
 ]
-export default featured
+export default featured;
