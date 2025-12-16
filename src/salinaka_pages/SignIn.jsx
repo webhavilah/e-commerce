@@ -117,8 +117,8 @@ export const SignIn = () => {
         </nav>
       </header>
 
-      <div className="mt-41 bg-0 h-screen w-full m-auto ">
-        <div className="border border-[#DFDFDF] w-[50%] mt-28 m-auto">
+      <div className="mt-35 bg-0 h-screen w-full m-auto ">
+        <div className="border border-[#C5C5C5] w-[50%] xl:w-[60%] mt-28 m-auto">
           <div className="flex px-7 justify-between items-center">
             <div className="w-[57%]">
               <h2 className="font-semibold text-2xl mt-7">
@@ -191,7 +191,7 @@ export const SignIn = () => {
               </button>
             </div>
           </div>
-          <div className="bg-[#f2f2f2] flex py-3 border-t border-[#DFDFDF] justify-center items-center space-x-7 p">
+          <div className="bg-[#f2f2f2] flex py-3 border-t border-[#C5C5C5] justify-center items-center space-x-7 p">
             <p className="text-sm font-medium text-[#4A4A4A]">
               Don't have an account?
             </p>
