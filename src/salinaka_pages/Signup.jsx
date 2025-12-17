@@ -111,16 +111,16 @@ function Signup() {
         </nav>
       </header>
 
-      <div className="mt-40 bg-0 h-screen w-full m-auto">
-        <div className="border border-[#DFDFDF] w-[50%] m-auto mt-28 ">
+      <div className="mt-33 bg-0 h-screen w-full m-auto">
+        <div className="border border-[#C5C5C5] w-[53%] m-auto mt-28 ">
           <div className="flex px-8 justify-between items-center">
-            <div className="w-[57%] ">
-              <h2 className="font-semibold text-2xl mt-7">
+            <div className="w-[55%] ">
+              <h2 className="font-semibold text-xl mt-7">
                 Sign up to Salinaka
               </h2>
               <form className="w-[90%] ">
                 <div className="flex flex-col mt-7">
-                  <label className="text-[13px] pl-5 font-medium text-[#696D7B]">
+                  <label className="text-[13px] pl-5 font-medium text-[#696868] pb-2">
                     *Full name
                   </label>
                   <input
@@ -129,8 +129,8 @@ function Signup() {
                     placeholder="John Deo"
                   />
                 </div>
-                <div className="flex flex-col mt-3">
-                  <label className="text-[13px] pl-5 font-medium text-[#696D7B]">
+                <div className="flex flex-col mt-1.5">
+                  <label className="text-[13px] pl-5 font-medium text-[#696868] pb-2">
                     *Email
                   </label>
                   <input
@@ -139,8 +139,8 @@ function Signup() {
                     placeholder="test@example.com"
                   />
                 </div>
-                <div className="flex flex-col mt-3">
-                  <label className="text-[13px] pl-5 font-medium text-[#696D7B]">
+                <div className="flex flex-col mt-1.5">
+                  <label className="text-[13px] pl-5 font-medium text-[#696868] pb-2">
                     *Password
                   </label>
                   <input
@@ -149,43 +149,43 @@ function Signup() {
                     placeholder="Your Password"
                   />
                 </div>
-                <div className="">
-                  <button className="text-lg flex items-center ml-auto  my-5   bg-black text-[#F7FFFF] py-3 px-3 font-medium hover:bg-neutral-800 transition duration-400">
+                <div className="mb-7 mt-1">
+                  <button className="text-lg flex items-center ml-auto  my-5 bg-black text-[#F7FFFF] py-3 px-3 font-medium hover:bg-neutral-800 transition duration-400">
                     <p className="">Sign Up</p>
                     <FaArrowRight className="ml-2" />
                   </button>
                 </div>
               </form>
             </div>
-            <div className="mb-4 pr-5 ">
+            <div className="mb-4 pr-10">
               <div className="w-[0.1px] m-auto bg-[#E1E1E1] h-18 mt-3"></div>
               <p className="text-xs font-medium py-1 ">OR</p>
               <div className="w-[0.1px] m-auto bg-[#E1E1E1] h-18"></div>
             </div>
-            <div className="m-auto flex flex-col gap-4">
-              <button className="flex items-center justify-center w-60 text-sm  py-3 gap-2 bg-[#0078FF] hover:bg-blue-600 text-[#F7FFFF] font-semibold  transition duration-200">
+            <div className="my-auto flex flex-col gap-4">
+              <button className="flex items-center justify-center w-60 text-sm  py-3.5 gap-2 bg-[#0078FF] hover:bg-blue-600 text-[#F7FFFF] font-semibold  transition duration-200">
                 <p className="flex items-center ">
-                  <FaFacebookSquare className="w-3 h-3 right-4 relative" />{" "}
+                  <FaFacebookSquare className="w-4 h-4 right-4 relative" />{" "}
                   Continue with Facebook
                 </p>
               </button>
 
-              <button className="flex items-center justify-center w-60 text-sm  py-3 gap-2 border bg-[#FFFFFF] border-[#C5C5C5] text-[#3A3A3A] font-semibold hover:bg-[#0000001d] transition duration-200">
+              <button className="flex items-center justify-center w-60 text-sm  py-3.5 gap-2 border bg-[#FFFFFF] border-[#C5C5C5] text-[#3A3A3A] font-semibold hover:bg-[#0000001d] transition duration-200">
                 <p className="flex items-center">
-                  <FaGoogle className="w- 3 h-3 ml-0 right-6 relative" />{" "}
+                  <FaGoogle className="w-4 h-4 ml-0 right-6 relative" />{" "}
                   Continue with Google
                 </p>
               </button>
 
-              <button className="flex items-center justify-center w-60 text-sm  py-3 gap-2 border bg-[#24292E] text-[#ffffff] font-semibold hover:bg-[#31373c]  transition duration-200">
+              <button className="flex items-center justify-center w-60 text-sm  py-3.5 gap-2 border bg-[#24292E] text-[#ffffff] font-semibold hover:bg-[#31373c]  transition duration-200">
                 <p className=" flex items-center ">
-                  <FaGithub className="w-3 h-3 right-6 relative" /> Continue
+                  <FaGithub className="w-4 h-4 right-6 relative" /> Continue
                   with Github
                 </p>
               </button>
             </div>
           </div>
-          <div className="bg-[#f2f2f2] flex py-3 border-t border-[#DFDFDF] justify-center items-center space-x-7">
+          <div className="bg-[#f2f2f2] flex py-3 border-t border-[#C5C5C5] justify-center items-center space-x-7">
             <p className="text-sm font-medium text-[#4A4A4A]">Already have an account?</p>
             <button
               onClick={() => {
