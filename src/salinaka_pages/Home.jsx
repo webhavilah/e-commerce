@@ -5,9 +5,9 @@ import image from "../assets/salinaka image.png";
 import data from "../consumable/featured";
 import dataTwo from "../consumable/featured-two";
 import Navbar from "../components/Navbar";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import HomeProduct from "../components/HomeProduct";
-
+ 
 const Home = () => {
   const imageStyle = {
     height: "100%",
@@ -15,7 +15,7 @@ const Home = () => {
   };
 
   // const handleClick = ()=>{
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
   // }
     
     // if ("box" === onClick) {
@@ -37,9 +37,11 @@ const Home = () => {
               in your pocket. Glasses, sunglasses, and contacts—we’ve got your
               eyes covered.
             </p>
-            <button className="flex items-center justify-between bg-black text-white py-4 px-4 font-medium hover:bg-neutral-800 transition duration-400">
-              Shop Now <FaArrowRight className="ml-2" />
-            </button>
+            <Link to="/shop">
+              <button className="flex items-center justify-between bg-black text-white py-4 px-4 font-medium hover:bg-neutral-800 transition duration-400">
+                Shop Now <FaArrowRight className="ml-2" />
+              </button>
+            </Link>
           </div>
           <div className="w-[50%]">
             <img

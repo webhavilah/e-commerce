@@ -111,8 +111,8 @@ function Signup() {
         </nav>
       </header>
 
-      <div className="mt-33 bg-0 h-screen w-full m-auto">
-        <div className="border border-[#C5C5C5] w-[53%] m-auto mt-28 ">
+      <div className="mt-33 bg-0 w-full m-auto">
+        <div className="border border-[#C5C5C5] w-[10%] xl:w-[52%] xl:mt-10 m-auto  ">
           <div className="flex px-8 justify-between items-center">
             <div className="w-[55%] ">
               <h2 className="font-semibold text-xl mt-7">
@@ -158,11 +158,11 @@ function Signup() {
               </form>
             </div>
             <div className="mb-4 pr-10">
-              <div className="w-[0.1px] m-auto bg-[#E1E1E1] h-18 mt-3"></div>
+              <div className="w-[0.1px] m-auto bg-[#E1E1E1] h-17 mt-3"></div>
               <p className="text-xs font-medium py-1 ">OR</p>
-              <div className="w-[0.1px] m-auto bg-[#E1E1E1] h-18"></div>
+              <div className="w-[0.1px] m-auto bg-[#E1E1E1] h-17"></div>
             </div>
-            <div className="my-auto flex flex-col gap-4">
+            <div className="my-auto flex flex-col gap-3">
               <button className="flex items-center justify-center w-60 text-sm  py-3.5 gap-2 bg-[#0078FF] hover:bg-blue-600 text-[#F7FFFF] font-semibold  transition duration-200">
                 <p className="flex items-center ">
                   <FaFacebookSquare className="w-4 h-4 right-4 relative" />{" "}

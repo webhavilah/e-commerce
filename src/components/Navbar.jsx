@@ -21,21 +21,21 @@ function Navbar() {
       }
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);///////po[/]
   }, []);
   return (
     <header
       ref={navbar}
       className="h-30 fixed w-full z-50  flex items-center justify-center top-0 "
     >
-      <nav className="flex justify-center items-center w-[94%]">
+      <nav className="flex justify-center items-center w-15/16 g-red-700">
         <div className="w-[60%]">
           <ul className="flex  items-center ">
             <Link to="/">
               <img src={logo} className="h-[50px]" alt="" />
             </Link>
             <NavLink
-            onClick={handleScroll}
+              onClick={handleScroll}
               className={({ isActive }) =>
                 `${isActive ? " text-black" : "text-gray-500"
                 } text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`
@@ -45,7 +45,7 @@ function Navbar() {
               Home
             </NavLink>
             <NavLink
-            onClick={handleScroll}
+              onClick={handleScroll}
               className={({ isActive }) =>
                 `${isActive ? " text-black" : "text-gray-500"
                 } text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`
@@ -55,7 +55,7 @@ function Navbar() {
               Shop
             </NavLink>
             <NavLink
-            onClick={handleScroll}
+              onClick={handleScroll}
               className={({ isActive }) =>
                 `${isActive ? " text-black" : "text-gray-500"
                 } text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`
@@ -65,7 +65,7 @@ function Navbar() {
               Featured
             </NavLink>
             <NavLink
-            onClick={handleScroll}
+              onClick={handleScroll}
               className={({ isActive }) =>
                 `${isActive ? " text-black" : "text-gray-500"
                 } text-sm font-semibold hover:bg-[#0000000e] px-5 transition py-2.5`
@@ -76,7 +76,7 @@ function Navbar() {
             </NavLink>
           </ul>
         </div>
-        <div className="flex w-[50%] justify-between">
+        <div className="flex w-[50%] justify-around">
           <div className="flex items-center w-[60%]">
             <div className="bg-white flex space-x-3 border border-[#E5E5E5] items-center px-4 py-2">
               <IoIosSearch className="text-lg" />
@@ -90,7 +90,7 @@ function Navbar() {
               <AiOutlineShopping className="text-2xl text-black " />
             </div>
           </div>
-          <div className="w-[26%] flex items-center space-x-3.5 justify-between">
+          <div className="w-[30%]  flex items-center space-x-3.5 justify-center">
             <button onClick={() => {
               handleScroll()
               navigate('/signup')
