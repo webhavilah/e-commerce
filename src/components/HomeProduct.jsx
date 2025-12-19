@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 const HomeProduct = ({data, sectionName}) => {
     const navigate = useNavigate()
   return (
-    <div className=" w-[80%] m-auto mt-20 h-auto pb-80">
+    <div className=" w-[80%] m-auto mt-20 h-auto pb-80 font-bold">
     <div className="flex w-full justify-between">
-      <h1 className="text-black font-medium text-4xl pb-7">
+      <h1 className="text-black font-bold text-4xl pb-7">
         {sectionName}
       </h1>
       <h2 className="float-r font-100 text-xl underline">See All</h2>
@@ -27,10 +27,10 @@ const HomeProduct = ({data, sectionName}) => {
               />
             </div>
             <div className="bg-[#F9F9F9] p-4">
-              <h2 className="font-medium text-2xl">{data.brand}</h2>
+              <h2 className="font-bold text-2xl">{data.brand}</h2>
               <p
-                className="text-[#8E8E8E] font-medium "
-                style={{ fontStyle: "italic", fontSize: "17px" }}
+                className="text-[#8E8E8E] font-bold "
+                style={{ fontStyle: "italic", fontSize: "15px" }}
               >
                 {data.name}
               </p>

@@ -9,11 +9,19 @@ const Recommended = () => {
       <Navbar />
       <div className="flex w-[85%] bg-[#f3f3f3] m-auto mt-30 h-[400px] justify-between">
         <div className="w-[50%] text-[#1a1a1a] my-auto pl-10 pt-20 pb-10">
-          <h2 className="text-[50px] font-medium">Recommended Products</h2>
+          <h2 className="text-[50px] font-bold">Featured Products</h2>
         </div>
-        <div className="w-[50%] h-full bg-no-repeat">
-          <img className="w-150 h-full float-end ml-40" src={image} alt="" />
-        </div>
+
+          <div
+            className="w-[50%] h-full bg-no-repeat"
+            style={{
+              backgroundImage: `url(${image})`,
+              backgroundSize: "contain",
+              backgroundPosition: "left",
+              backgroundSize: "100%",
+            }}
+            
+          ></div>
       </div>
       <div className="w-[80%] m-auto mt-25 mb-35">
         <div className="grid lg:grid-cols-3 gap-5  ">
@@ -31,10 +39,10 @@ const Recommended = () => {
                   />
                 </div>
                 <div className="bg-[#F9F9F9] p-4">
-                  <h2 className="font-medium text-2xl">{data.brand}</h2>
+                  <h2 className="font-bold text-2xl">{data.brand}</h2>
                   <p
-                    className="text-[#8E8E8E] font-medium "
-                    style={{ fontStyle: "italic", fontSize: "17px" }}
+                    className="text-[#8E8E8E] font-bold "
+                    style={{ fontStyle: "italic", fontSize: "16px" }}
                   >
                     {data.name}
                   </p>
