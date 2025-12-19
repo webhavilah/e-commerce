@@ -117,8 +117,8 @@ export const SignIn = () => {
         </nav>
       </header>
 
-      <div className="mt-40 bg-0 w-full m-auto ">
-        <div className="border border-[#C5C5C5] w-[10%] xl:w-[52%] mt-28 m-auto">
+      <div className="mt-35 bg-0 w-full m-auto ">
+        <div className="border border-[#C5C5C5] w-[50%] xl:w-[60%] mt-28 m-auto">
           <div className="flex px-7 justify-between items-center">
             <div className="w-[57%]">
               <h2 className="font-semibold text-2xl mt-7">
@@ -201,7 +201,7 @@ export const SignIn = () => {
                 navigate("/Signup");
               }}
               className="bg-transparent border-[#E1E1E1] text-gray-500 text-[12px] font-semibold py-[9px] px-4 border hover:bg-[#0000000b] transition duration-400 hover:border-0 hover:py-2.5 "
-            >
+            > 
               Sign Up
             </button>
           </div>

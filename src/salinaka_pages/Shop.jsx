@@ -126,14 +126,14 @@ const Shop = () => {
                   />
                 </div>
                 <div className="bg-[#F9F9F9] p-4 text-center h-[130px]">
-                  <h2 className="font-medium text-1xl">{dataFour.brand}</h2>
+                  <h2 className="font-bold text-1xl">{dataFour.brand}</h2>
                   <p
-                    className="text-[#8E8E8E] font-medium pt-2"
+                    className="text-[#8E8E8E] font-bold pt-2"
                     style={{ fontStyle: "italic", fontSize: "15px" }}
                   >
                     {dataFour.name}
                   </p>
-                  <h3 className='pt-4 font-medium'>{dataFour.amount}</h3>
+                  <h3 className='pt-4 font-bold'>{dataFour.amount}</h3>
                 </div>
               </div>
             );

@@ -25,14 +25,14 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <div className="home">
+      <div className="home ">
         <div className="flex w-[85%] bg-[#f3f3f3] m-auto mt-30 ">
           <div className="w-[50%] text-[#1a1a1a] my-auto pl-10 pt-20 pb-10">
             <h2 className="text-[50px] max-w-sm leading-14 mb-6 ">
-              <span className="capitalize font-medium">see</span> everything
-              with <span className="capitalize font-medium">clarity</span>
+              <span className="capitalize font-bold">see</span> everything
+              with <span className="capitalize font-bold">clarity</span>
             </h2>
-            <p className="text-md text-[#4a4a4a] font-semibold  w-md mb-4">
+            <p className="text-md text-[#4a4a4a] font-bold  w-md mb-4">
               Buying eyewear should leave you happy and good-looking, with money
               in your pocket. Glasses, sunglasses, and contacts—we’ve got your
               eyes covered.
@@ -93,7 +93,7 @@ const Home = () => {
       <div className="bg-[#F0F0F0] h-46 flex w-full">
         <div className="flex w-[93%] justify-between m-auto h-30 items-center">
           <div className="">
-          <h4 className="text-[13px] text-[##4A4A4A]">Developed by <span className="underline font-medium"> Ayanfe & HAVILAH</span></h4>
+          <h4 className="text-[13px] text-[##4A4A4A]">Developed by <span className="underline font-bold"> Ayanfe & HAVILAH</span></h4>
         </div>
         <div className="items-center h-full grid mr-10 px-10">
           <img src={logo}  style={{width: "150px", paddingBottom: "20px"}} alt="" />

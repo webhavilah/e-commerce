@@ -8,7 +8,7 @@ const Featured = () => {
       <Navbar />
       <div className="flex w-[85%] bg-[#f3f3f3] m-auto mt-30 h-[400px] justify-between">
         <div className="w-[65%] text-[#1a1a1a] my-auto pl-10 pt-20 pb-10">
-          <h2 className="text-[50px] font-medium">Featured Products</h2>
+          <h2 className="text-[50px] font-bold">Featured Products</h2>
         </div>
 
           <div
@@ -16,7 +16,7 @@ const Featured = () => {
             style={{
               backgroundImage: `url(${imageTwo})`,
               backgroundSize: "cover",
-              backgroundPosition: "center center",
+              backgroundPosition: "center",
               backgroundSize: "120%",
             }}
             
@@ -38,10 +38,10 @@ const Featured = () => {
                   />
                 </div>
                 <div className="bg-[#F9F9F9] p-4">
-                  <h2 className="font-medium text-2xl">{dataThree.brand}</h2>
+                  <h2 className="font-bold text-2xl">{dataThree.brand}</h2>
                   <p
-                    className="text-[#8E8E8E] font-medium"
-                    style={{ fontStyle: "italic", fontSize: "17px" }}
+                    className="text-[#8E8E8E] font-bold"
+                    style={{ fontStyle: "italic", fontSize: "16px" }}
                   >
                     {dataThree.name}
                   </p>
