@@ -126,21 +126,21 @@ export const SignIn = () => {
               </h2>
               <form className="w-[90%] pt-10">
                 <div className="flex flex-col mt-3">
-                  <label className="text-[13px] pl-5 font-medium text-[#696D7B]">
+                  <label className="text-[13px] pl-5 font-bold text-[#696D7B]">
                     Email
                   </label>
                   <input
-                    className=" border border-[#C5C5C5] py-2 pl-5 w-full  focus:ring-0 focus: focus:outline-none placeholder:font-medium placeholder:text-[#9C9C9C]"
+                    className=" border border-[#C5C5C5] py-2 pl-5 w-full  focus:ring-0 focus: focus:outline-none placeholder:font-bold placeholder:text-[#9C9C9C]"
                     type="email"
                     placeholder="test@example.com"
                   />
                 </div>
                 <div className="flex flex-col mt-3">
-                  <label className="text-[13px] pl-5 font-medium text-[#696D7B]">
+                  <label className="text-[13px] pl-5 font-bold text-[#696D7B]">
                     Password
                   </label>
                   <input
-                    className=" border border-[#C5C5C5] py-2 pl-5 w-full  focus:ring-0 focus: focus:outline-none placeholder:font-medium placeholder:text-[#9C9C9C]"
+                    className=" border border-[#C5C5C5] py-2 pl-5 w-full  focus:ring-0 focus: focus:outline-none placeholder:font-bold placeholder:text-[#9C9C9C]"
                     type="password"
                     placeholder="Your password"
                   />
@@ -150,13 +150,13 @@ export const SignIn = () => {
                   handleScroll();
                   navigate("/forgot-password");
                 }}
-                 className="text-[13px] font-medium text-[#4A4A4A] pt-5 underline decoration-black underline-offset-1">
+                 className="text-[13px] font-bold text-[#4A4A4A] pt-5 underline decoration-black underline-offset-1">
                  
                   Forgot password?
                 </p>
               </Link>
                 <div className="">
-                  <button className="text-lg flex items-center ml-auto  mb-5 bg-black text-[#F7FFFF] py-3 px-3 font-medium hover:bg-neutral-800">
+                  <button className="text-lg flex items-center ml-auto  mb-5 bg-black text-[#F7FFFF] py-3 px-3 font-bold hover:bg-neutral-800">
                     <p className="">Sign In</p>
                     <FaArrowRight className="ml-2" />
                   </button>
@@ -192,7 +192,7 @@ export const SignIn = () => {
             </div>
           </div>
           <div className="bg-[#f2f2f2] flex py-3 border-t border-[#C5C5C5] justify-center items-center space-x-7 p">
-            <p className="text-sm font-medium text-[#4A4A4A]">
+            <p className="text-sm font-bold text-[#4A4A4A]">
               Don't have an account?
             </p>
             <button
