@@ -55,6 +55,7 @@ const Home = () => {
       </div>
      <HomeProduct data={data} sectionName='Featured Products'/>
      <HomeProduct data={dataTwo} sectionName='Recommended Products'/>
+     
       {/* <div className=" w-[80%] m-auto mt-20 h-auto pb-100">
         <div className="flex w-full justify-between">
           <h1 className="text-black font-medium text-4xl pb-7">

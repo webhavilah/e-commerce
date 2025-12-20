@@ -110,7 +110,7 @@ export const SignIn = () => {
               {/* <Link to='/signIn'>
      <button className="bg-[#f2f2f2] text-gray-500 text-[12px] font-semibold py-[9px] px-4 border-gray-500 border hover:bg-white transition duration-400">
         Sign In
-      </button>
+      </button> 
      </Link> */}
             </div>
           </div>
