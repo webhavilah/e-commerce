@@ -120,47 +120,47 @@ function Signup() {
               </h2>
               <form className="w-[90%] ">
                 <div className="flex flex-col mt-7">
-                  <label className="text-[13px] pl-5 font-medium text-[#696868] pb-2">
+                  <label className="text-[13px] pl-5 font-bold text-[#696D7B]">
                     *Full name
                   </label>
                   <input
-                    className=" border border-[#C5C5C5] py-1.5 pl-5 w-full  focus:ring-0 focus: focus:outline-none placeholder:font-medium placeholder:text-[#9C9C9C]"
+                    className=" border border-[#C5C5C5] py-1.5 pl-5 w-full  focus:ring-0 focus: focus:outline-none placeholder:font-bold placeholder:text-[#9C9C9C]"
                     type="text"
                     placeholder="John Deo"
                   />
                 </div>
-                <div className="flex flex-col mt-1.5">
-                  <label className="text-[13px] pl-5 font-medium text-[#696868] pb-2">
+                <div className="flex flex-col mt-3">
+                  <label className="text-[13px] pl-5 font-bold text-[#696D7B]">
                     *Email
                   </label>
                   <input
-                    className=" border border-[#C5C5C5] py-1.5 pl-5 w-full  focus:ring-0 focus: focus:outline-none placeholder:font-medium placeholder:text-[#9C9C9C]"
+                    className=" border border-[#C5C5C5] py-1.5 pl-5 w-full  focus:ring-0 focus: focus:outline-none placeholder:font-bold placeholder:text-[#9C9C9C]"
                     type="email"
                     placeholder="test@example.com"
                   />
                 </div>
-                <div className="flex flex-col mt-1.5">
-                  <label className="text-[13px] pl-5 font-medium text-[#696868] pb-2">
+                <div className="flex flex-col mt-3">
+                  <label className="text-[13px] pl-5 font-bold text-[#696D7B]">
                     *Password
                   </label>
                   <input
-                    className=" border border-[#C5C5C5] py-1.5 pl-5 w-full focus:ring-0 focus: focus:outline-none placeholder:font-medium placeholder:text-[#9C9C9C]"
+                    className=" border border-[#C5C5C5] py-1.5 pl-5 w-full focus:ring-0 focus: focus:outline-none placeholder:font-bold placeholder:text-[#9C9C9C]"
                     type="password"
                     placeholder="Your Password"
                   />
                 </div>
-                <div className="mb-7 mt-1">
-                  <button className="text-lg flex items-center ml-auto  my-5 bg-black text-[#F7FFFF] py-3 px-3 font-medium hover:bg-neutral-800 transition duration-400">
+                <div className="">
+                  <button className="text-[16px] flex items-center ml-auto  my-5   bg-black text-[#F7FFFF] py-3 px-3 font-bold hover:bg-neutral-800 transition duration-400">
                     <p className="">Sign Up</p>
                     <FaArrowRight className="ml-2" />
                   </button>
                 </div>
               </form>
             </div>
-            <div className="mb-4 pr-10">
-              <div className="w-[0.1px] m-auto bg-[#E1E1E1] h-17 mt-3"></div>
-              <p className="text-xs font-medium py-1 ">OR</p>
-              <div className="w-[0.1px] m-auto bg-[#E1E1E1] h-17"></div>
+            <div className="mb-4 pr-5 ">
+              <div className="w-[0.1px] m-auto bg-[#E1E1E1] h-18 mt-3"></div>
+              <p className="text-xs font-bold py-1 ">OR</p>
+              <div className="w-[0.1px] m-auto bg-[#E1E1E1] h-18"></div>
             </div>
             <div className="my-auto flex flex-col gap-3">
               <button className="flex items-center justify-center w-60 text-sm  py-3.5 gap-2 bg-[#0078FF] hover:bg-blue-600 text-[#F7FFFF] font-semibold  transition duration-200">
@@ -186,7 +186,7 @@ function Signup() {
             </div>
           </div>
           <div className="bg-[#f2f2f2] flex py-3 border-t border-[#C5C5C5] justify-center items-center space-x-7">
-            <p className="text-sm font-medium text-[#4A4A4A]">Already have an account?</p>
+            <p className="text-sm font-bold text-[#4A4A4A]">Already have an account?</p>
             <button
               onClick={() => {
                 handleScroll();

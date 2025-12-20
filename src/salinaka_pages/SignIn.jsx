@@ -110,15 +110,15 @@ export const SignIn = () => {
               {/* <Link to='/signIn'>
      <button className="bg-[#f2f2f2] text-gray-500 text-[12px] font-semibold py-[9px] px-4 border-gray-500 border hover:bg-white transition duration-400">
         Sign In
-      </button> 
+      </button>
      </Link> */}
             </div>
           </div>
         </nav>
       </header>
 
-      <div className="mt-35 bg-0 w-full m-auto ">
-        <div className="border border-[#C5C5C5] w-[50%] xl:w-[60%] mt-28 m-auto">
+      <div className="mt-40 bg-0 w-full m-auto ">
+        <div className="border border-[#C5C5C5] w-[10%] xl:w-[52%] mt-28 m-auto">
           <div className="flex px-7 justify-between items-center">
             <div className="w-[57%]">
               <h2 className="font-semibold text-2xl mt-7">
