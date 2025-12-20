@@ -112,7 +112,7 @@ function Signup() {
       </header>
 
       <div className="mt-30 bg-0 w-full m-auto">
-        <div className="border border-[#C5C5C5] lg:w-[80%] xl:w-[60%] xl:mt-10 m-auto  ">
+        <div className="border border-[#C5C5C5] w-[70%] lg:w-[70%] xl:w-[60%] xl:mt-10 m-auto  ">
           <div className="flex px-8 justify-between items-center">
             <div className="w-[57%] ">
               <h2 className="font-semibold text-2xl mt-7">
