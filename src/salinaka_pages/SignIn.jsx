@@ -117,30 +117,30 @@ export const SignIn = () => {
         </nav>
       </header>
 
-      <div className="mt-35 bg-0 w-full m-auto ">
-        <div className="border border-[#C5C5C5] w-[50%] xl:w-[60%] mt-28 m-auto">
+      <div className="mt-40 bg-0 w-full m-auto ">
+        <div className="border border-[#C5C5C5] w-[10%] xl:w-[52%] mt-28 m-auto">
           <div className="flex px-7 justify-between items-center">
             <div className="w-[57%]">
               <h2 className="font-semibold text-2xl mt-7">
                 Sign in to Salinaka
               </h2>
-              <form className="w-[90%] pt-10">
+              <form className="w-[85%] pt-10">
                 <div className="flex flex-col mt-3">
-                  <label className="text-[13px] pl-5 font-bold text-[#696D7B]">
+                  <label className="text-[13px] pl-5 font-medium text-[#696D7B]">
                     Email
                   </label>
                   <input
-                    className=" border border-[#C5C5C5] py-2 pl-5 w-full  focus:ring-0 focus: focus:outline-none placeholder:font-bold placeholder:text-[#9C9C9C]"
+                    className=" border border-[#C5C5C5] py-2 pl-5 w-full  focus:ring-0 focus: focus:outline-none placeholder:font-medium placeholder:text-[#9C9C9C]"
                     type="email"
                     placeholder="test@example.com"
                   />
                 </div>
                 <div className="flex flex-col mt-3">
-                  <label className="text-[13px] pl-5 font-bold text-[#696D7B]">
+                  <label className="text-[13px] pl-5 font-medium text-[#696D7B]">
                     Password
                   </label>
                   <input
-                    className=" border border-[#C5C5C5] py-2 pl-5 w-full  focus:ring-0 focus: focus:outline-none placeholder:font-bold placeholder:text-[#9C9C9C]"
+                    className=" border border-[#C5C5C5] py-2 pl-5 w-full  focus:ring-0 focus: focus:outline-none placeholder:font-medium placeholder:text-[#9C9C9C]"
                     type="password"
                     placeholder="Your password"
                   />
@@ -150,40 +150,40 @@ export const SignIn = () => {
                   handleScroll();
                   navigate("/forgot-password");
                 }}
-                 className="text-[13px] font-bold text-[#4A4A4A] pt-5 underline decoration-black underline-offset-1">
+                 className="text-[13px] font-medium text-[#4A4A4A] pt-5 underline decoration-black underline-offset-1">
                  
                   Forgot password?
                 </p>
               </Link>
                 <div className="">
-                  <button className="text-lg flex items-center ml-auto  mb-5 bg-black text-[#F7FFFF] py-3 px-3 font-bold hover:bg-neutral-800">
+                  <button className="text-lg flex items-center ml-auto mb-5 bg-black text-[#F7FFFF] py-3 px-3 font-medium hover:bg-neutral-800">
                     <p className="">Sign In</p>
                     <FaArrowRight className="ml-2" />
                   </button>
                 </div>
               </form>
             </div>
-            <div className="mb-4 mt-6">
+            <div className="mb-4 mt-6 pr-2">
               <div className="w-[0.7px] m-auto bg-[#E1E1E1] h-16"></div>
               <p className="text-xs py-1">OR</p>
               <div className="w-[0.7px] m-auto bg-[#E1E1E1] h-16"></div>
             </div>
-            <div className="m-auto flex flex-col gap-4 pl-7">
-              <button className="flex items-center justify-center w-60 text-sm  py-3 gap-2 bg-[#0078FF] hover:bg-blue-600 text-[#F7FFFF] font-semibold  transition duration-200">
+            <div className="flex flex-col gap-3 w-[40%] pl-13">
+              <button className="flex items-center justify-center w-60 text-sm  py-3.5 gap-2 bg-[#0078FF] hover:bg-blue-600 text-[#F7FFFF] font-semibold  transition duration-200">
                 <p className="flex items-center ">
                   <FaFacebookSquare className="w-3 h-3 right-4 relative" />{" "}
                   Continue with Facebook
                 </p>
               </button>
 
-              <button className="flex items-center justify-center w-60 text-sm  py-3 gap-2 border bg-[#FFFFFF] border-[#C5C5C5] text-[#3A3A3A] font-semibold hover:bg-[#0000001d] transition duration-200">
+              <button className="flex items-center justify-center w-60 text-sm  py-3.5 gap-2 border bg-[#FFFFFF] border-[#C5C5C5] text-[#3A3A3A] font-semibold hover:bg-[#0000001d] transition duration-200">
                 <p className="flex items-center">
                   <FaGoogle className="w- 3 h-3 ml-0 right-6 relative" />{" "}
                   Continue with Google
                 </p>
               </button>
 
-              <button className="flex items-center justify-center w-60 text-sm  py-3 gap-2 border bg-[#24292E] text-[#ffffff] font-semibold hover:bg-[#31373c]  transition duration-200">
+              <button className="flex items-center justify-center w-60 text-sm  py-3.5 gap-2 border bg-[#24292E] text-[#ffffff] font-semibold hover:bg-[#31373c]  transition duration-200">
                 <p className=" flex items-center ">
                   <FaGithub className="w-3 h-3 right-6 relative" /> Continue
                   with Github
@@ -192,7 +192,7 @@ export const SignIn = () => {
             </div>
           </div>
           <div className="bg-[#f2f2f2] flex py-3 border-t border-[#C5C5C5] justify-center items-center space-x-7 p">
-            <p className="text-sm font-bold text-[#4A4A4A]">
+            <p className="text-sm font-medium text-[#4A4A4A]">
               Don't have an account?
             </p>
             <button
