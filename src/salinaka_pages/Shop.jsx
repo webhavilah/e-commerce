@@ -5,6 +5,7 @@ import { AiOutlineShopping } from "react-icons/ai";
 import dataFour from '../consumable/featured-four'
 import { handleScroll } from "../utils/handleScroll";
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const Shop = () => {
   const navigate = useNavigate  ()
@@ -26,7 +27,7 @@ const Shop = () => {
   }, []);
   return (
     <div>
-      <header
+      {/* <header
             ref={navbar}
             className="h-30 fixed w-full z-50  flex items-center justify-center top-0 "
           >
@@ -108,7 +109,8 @@ const Shop = () => {
                 </div>
               </div>
             </nav>
-          </header>
+          </header> */}
+          <Navbar/>
        <div className="mt-27">
           <div className="w-[87%] m-auto h-[70vh]">
             <div className="grid lg:grid-cols-7 gap-5 h-70 w-full ">
