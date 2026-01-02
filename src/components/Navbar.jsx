@@ -1,17 +1,18 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import logo from "../assets/salinaka-logo.png";
 import { IoIosSearch } from "react-icons/io";
 import { AiOutlineShopping } from "react-icons/ai";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { handleScroll } from "../utils/handleScroll";
 import { IoMenuSharp } from "react-icons/io5";
-import { closeCart } from "../utils/close";
+import { CartContext } from "../context/CartContext";
 
 function Navbar() {
   const navigate = useNavigate();
   const navbar = useRef(null);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [cartmenu, setCartmenu] = useState(false)
+  const { cart } = useContext(CartContext)
 
   useEffect(() => {
     const onScroll = () => {
@@ -27,16 +28,12 @@ function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // const closeCart = () => {
-  //   if (cartmenu === true) {
-  //     setCartmenu(false)
-  //   }
-  // }
+  console.log("cart items:", cart)
 
 
   return (
     <>
-      <div className="bg-green-300" >
+      <div className="" >
         <header
           ref={navbar}
           className="h-30 fixed w-full z-10 flex items-center justify-center top-0"
@@ -101,22 +98,39 @@ function Navbar() {
         </div>
         {
           // cartmenu && (
-            <div className="flex justify-end">
+          <div className="flex justify-end">
 
-              <div className={`h-screen fixed w-44/100 z-20 bg-white py-7 transition-all duration-300 ease-out ${cartmenu ? "translate-x-0" : "translate-x-full"}`}>
-                <div className="flex  justify-between items-center w-90/100 m-auto">
-                  <div className="flex space-x-3 items-center">
-                    <h3 className="font-bold">My Basket</h3>
-                    <p className="font-semibold text-[13px] text-gray-600">( 0 item)</p>
-                  </div>
-                  <div className="flex">
-                    <button className="py-2 cursor-pointer border border-zinc-300 px-4 font-semibold text-[13px] text-gray-800" onClick={() => setCartmenu(!cartmenu)}>Close</button>
-                    <button className="py-2 cursor-not-allowed border border-zinc-200 px-4 font-semibold text-[13px] text-gray-400">Clear Basket</button>
-                  </div>
+            <div className={`h-screen fixed w-44/100 z-20 bg-white py-7 transition-all duration-300 ease-out ${cartmenu ? "translate-x-0" : "translate-x-full"}`}>
+              <div className="flex  justify-between items-center w-90/100 m-auto">
+                <div className="flex space-x-3 items-center">
+                  <h3 className="font-bold">My Basket</h3>
+                  <p className="font-semibold text-[13px] text-gray-600">( {cart.length} item)</p>
                 </div>
-
+                <div className="flex">
+                  <button className="py-2 cursor-pointer border border-zinc-300 px-4 font-semibold text-[13px] text-gray-800" onClick={() => setCartmenu(!cartmenu)}>Close</button>
+                  <button className="py-2 cursor-not-allowed border border-zinc-200 px-4 font-semibold text-[13px] text-gray-400">Clear Basket</button>
+                </div>
               </div>
+              <div className="bg-green-200">
+                {/* <div className="flex"> */}
+                {
+                  cart.map((item, id) => {
+                    return (
+                      <div key={id} className="bg-amber-500 flex my-2">
+                        <div className="flex flex-col">
+                          <button className="border border-gray-300 m-auto py-2 px-3">+</button>
+                          <button className="border border-gray-300 m-auto py-2 px-3">-</button>
+                        </div>
+                        <h3>{item.brand}</h3>
+                      </div>
+                    )
+                  })
+                }
+                {/* </div> */}
+              </div>
+
             </div>
+          </div>
           // )
         }
 

@@ -14,14 +14,6 @@ const Home = () => {
     width: "100%",
   };
 
-  // const handleClick = ()=>{
-    const navigate = useNavigate()
-  // }
-    
-    // if ("box" === onClick) {
-    //     id == 1
-    // }
-
   return (
     <div>
       <Navbar />
