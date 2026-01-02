@@ -15,8 +15,12 @@ const CartProvider = ({children}) => {
     const addToCart =(item)=>{
         setCart((prev) => [...prev, item]);
     }
+    const clearCartItem = ()=>{
+        localStorage.setItem('cart', JSON.stringify([]));
+        setCart([])
+    }
     return (
-        <CartContext.Provider value={{addToCart, cart}}>
+        <CartContext.Provider value={{addToCart, clearCartItem, cart}}>
             {children}
         </CartContext.Provider>
     )

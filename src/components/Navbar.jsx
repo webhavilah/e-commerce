@@ -12,7 +12,7 @@ function Navbar() {
   const navbar = useRef(null);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [cartmenu, setCartmenu] = useState(false)
-  const { cart } = useContext(CartContext)
+  const { cart, clearCartItem } = useContext(CartContext)
 
   useEffect(() => {
     const onScroll = () => {
@@ -28,7 +28,6 @@ function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  console.log("cart items:", cart)
 
 
   return (
@@ -59,8 +58,11 @@ function Navbar() {
                   <input type="text" className="placeholder:text-[13px] xl:pr-15 lg:pr-7 focus:ring-0 focus:border-transparent focus:outline-none" placeholder="Search product..." />
                 </div>
 
-                <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 " onClick={() => setCartmenu(!cartmenu)}>
+                <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 relative" onClick={() => setCartmenu(!cartmenu)}>
                   <AiOutlineShopping className="text-2xl  text-black" />
+                  <span className="absolute top-0 right-0">
+                    <p className="text-sm bg-red-500 rounded-[50%] size-5 text-white text-bold ">{cart.length}</p>
+                  </span>
                 </div>
               </div>
 
@@ -99,8 +101,7 @@ function Navbar() {
         {
           // cartmenu && (
           <div className="flex justify-end">
-
-            <div className={`h-screen fixed w-44/100 z-20 bg-white py-7 transition-all duration-300 ease-out ${cartmenu ? "translate-x-0" : "translate-x-full"}`}>
+            <div className={`h-screen fixed w-44/100 z-20 bg-white shadow-2xl py-7 transition-all duration-300 ease-out ${cartmenu ? "translate-x-0" : "translate-x-full"}`}>
               <div className="flex  justify-between items-center w-90/100 m-auto">
                 <div className="flex space-x-3 items-center">
                   <h3 className="font-bold">My Basket</h3>
@@ -108,32 +109,46 @@ function Navbar() {
                 </div>
                 <div className="flex">
                   <button className="py-2 cursor-pointer border border-zinc-300 px-4 font-semibold text-[13px] text-gray-800" onClick={() => setCartmenu(!cartmenu)}>Close</button>
-                  <button className="py-2 cursor-not-allowed border border-zinc-200 px-4 font-semibold text-[13px] text-gray-400">Clear Basket</button>
+                  <button className={`${cart.length === 0 ? 'cursor-not-allowed text-gray-400' : " cursor-pointer text-gray-600"}py-2  border border-zinc-200 px-4 font-semibold text-[13px]`} onClick={() => clearCartItem()}>Clear Basket</button>
                 </div>
               </div>
-              <div className="bg-green-200">
-                {/* <div className="flex"> */}
+              {cart.length > 0 ? (
+                <div className="overflow-y-auto max-h-screen">
                 {
                   cart.map((item, id) => {
                     return (
-                      <div key={id} className="bg-amber-500 flex my-2">
-                        <div className="flex flex-col">
-                          <button className="border border-gray-300 m-auto py-2 px-3">+</button>
-                          <button className="border border-gray-300 m-auto py-2 px-3">-</button>
+                      <div key={id} className="w-full">
+                        <div className="w-9/10 border border-gray-200 flex my-3 m-auto shadow-sm">
+                          <div className="flex flex-col w-7/100">
+                            <button className="border border-gray-300 m-auto w-full py-3">+</button>
+                            <button className="border border-gray-300 m-auto w-full py-3">-</button>
+                          </div>
+                          <div className="flex items-center">
+                            <div className="">
+                              <img src={item.imgUrl} className="h-20" alt="" />
+                            </div>
+                            <div className="">
+                              <h3 onClick={() => navigate(`/product/${id}`)} className=" text-gray-900 font-semibold mb-2 cursor-pointer underline">{item.brand}</h3>
+                              <p className="text-gray-400 text-[13px] font-semibold">Quantity</p>
+                            </div>
+                            <div className=""></div>
+                            <div className=""></div>
+                          </div>
+                          <div className="">
+
+                          </div>
                         </div>
-                        <h3>{item.brand}</h3>
                       </div>
                     )
                   })
                 }
                 {/* </div> */}
               </div>
+              ) : (<p> eempty cart</p>)}
 
             </div>
           </div>
-          // )
         }
-
       </div>
     </>
   );
