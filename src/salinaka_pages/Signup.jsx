@@ -111,11 +111,11 @@ function Signup() {
         </nav>
       </header>
 
-      <div className="mt-30 bg-0 w-full m-auto">
-        <div className="border border-[#C5C5C5] w-[70%] lg:w-[70%] xl:w-[60%] xl:mt-10 m-auto  ">
+      <div className="mt-33 bg-0 w-full m-auto">
+        <div className="border border-[#C5C5C5] w-[10%] xl:w-[52%] xl:mt-10 m-auto  ">
           <div className="flex px-8 justify-between items-center">
-            <div className="w-[57%] ">
-              <h2 className="font-semibold text-2xl mt-7">
+            <div className="w-[55%] ">
+              <h2 className="font-semibold text-xl mt-7">
                 Sign up to Salinaka
               </h2>
               <form className="w-[90%] ">
@@ -162,24 +162,24 @@ function Signup() {
               <p className="text-xs font-bold py-1 ">OR</p>
               <div className="w-[0.1px] m-auto bg-[#E1E1E1] h-18"></div>
             </div>
-            <div className="m-auto flex flex-col gap-4">
-              <button className="flex items-center justify-center w-60 text-sm  py-3 gap-2 bg-[#0078FF] hover:bg-blue-600 text-[#F7FFFF] font-semibold  transition duration-200">
+            <div className="my-auto flex flex-col gap-3">
+              <button className="flex items-center justify-center w-60 text-sm  py-3.5 gap-2 bg-[#0078FF] hover:bg-blue-600 text-[#F7FFFF] font-semibold  transition duration-200">
                 <p className="flex items-center ">
-                  <FaFacebookSquare className="w-3 h-3 right-4 relative" />{" "}
+                  <FaFacebookSquare className="w-4 h-4 right-4 relative" />{" "}
                   Continue with Facebook
                 </p>
               </button>
 
-              <button className="flex items-center justify-center w-60 text-sm  py-3 gap-2 border bg-[#FFFFFF] border-[#C5C5C5] text-[#3A3A3A] font-semibold hover:bg-[#0000001d] transition duration-200">
+              <button className="flex items-center justify-center w-60 text-sm  py-3.5 gap-2 border bg-[#FFFFFF] border-[#C5C5C5] text-[#3A3A3A] font-semibold hover:bg-[#0000001d] transition duration-200">
                 <p className="flex items-center">
-                  <FaGoogle className="w- 3 h-3 ml-0 right-6 relative" />{" "}
+                  <FaGoogle className="w-4 h-4 ml-0 right-6 relative" />{" "}
                   Continue with Google
                 </p>
               </button>
 
-              <button className="flex items-center justify-center w-60 text-sm  py-3 gap-2 border bg-[#24292E] text-[#ffffff] font-semibold hover:bg-[#31373c]  transition duration-200">
+              <button className="flex items-center justify-center w-60 text-sm  py-3.5 gap-2 border bg-[#24292E] text-[#ffffff] font-semibold hover:bg-[#31373c]  transition duration-200">
                 <p className=" flex items-center ">
-                  <FaGithub className="w-3 h-3 right-6 relative" /> Continue
+                  <FaGithub className="w-4 h-4 right-6 relative" /> Continue
                   with Github
                 </p>
               </button>
