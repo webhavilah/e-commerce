@@ -121,23 +121,23 @@ const Shop = () => {
                 key={id}
                 className="relative group w-full gap-6 border border-[#E1E1E1] cursor-pointer flex flex-col overflow-hidden h-[250px]"
               >
-                <div className="h-[120px] bg-[#F2F2F2] flex items-center justify-center transition-all duration-300 group-hover:h-20">
+                <div className="h-[100px] bg-[#F2F2F2] flex items-center justify-center transition-all duration-300 group-hover:h-20">
                   <img
                     src={item.imgUrl}
                     alt={item.brand + "'s image"}
-                    className="mx-auto w-35 h-full transition-transform duration-300 group-hover:scale-90"
+                    className="mx-auto w-35 h-full transition-transform duration-200 group-hover:scale-90"
                   />
                 </div>
 
-                <div className="bg-[#F9F9F9] py-4 text-center flex-1 transition-all duration-300">
-                  <h2 className="font-bold text-1xl">{item.brand}</h2>
-                  <p className="text-[#8E8E8E] font-bold pt-2 italic text-[15px]">
+                <div className="bg-[#F9F9F9] text-center flex-1 transition-all duration-200">
+                  <h2 className="font-bold text-[14px]">{item.brand}</h2>
+                  <p className="text-[#BBB6B6] font-bold pt-1 italic text-[13px]">
                     {item.name}
                   </p>
                   <h3 className="py-4 font-bold">{item.amount}</h3>
                 </div>
 
-                <div className="absolute bottom-0 left-0 w-full mt-30 bg-black text-white text-center font-bold text-sm py-2 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <div className="absolute bottom-0 left-0 w-full mt-30 bg-black text-white text-center font-bold text-sm py-2 transform translate-y-10 group-hover:translate-y-0 transition-transform duration-300">
                   <p>Add to basket</p>
                 </div>
               </div>

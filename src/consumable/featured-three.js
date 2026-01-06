@@ -1,54 +1,54 @@
 const dataThree = [
     {
-        id: 1,
+        id: 13,
         brand: "Burnikk",
         name: "Sexbomb",
         imgUrl: '../src/assets/f-1.png',
     },
     {
-        id: 2,
+        id: 14,
         brand: "Kibal Batal",
         name: "Kibal Black",
         imgUrl: "../src/assets/f-2.png",
     },
     {
-        id: 3,
+        id: 15,
         brand: "Very Nice",
         name: "Salt maalat",
         imgUrl: "../src/assets/f-3.png"
     },
     {
-        id: 4,
+        id: 16,
         brand: "Buldit",
         name: "Salt Maalat",
         imgUrl: "../src/assets/f-4.png",
     },
     {
-        id: 5,
+        id: 17,
         brand: "Balakubak",
         name: "Betsin Maalat",
         imgUrl: "../src/assets/f-5.png",
     },
     {
-        id: 6,
+        id: 18,
         brand: "Tiktilaok Manok",
         name: "Sexbomb",
         imgUrl: "../src/assets/f-2.png",
     },
     {
-        id: 7,
+        id: 19,
         brand: "Kutu",
         name: "Sexbomb",
         imgUrl: "../src/assets/f-1.png",
     },
     {
-        id: 8,
+        id: 20,
         brand: "Quake Overload",
         name: "Yezyow",
         imgUrl: "../src/assets/p-5.png",
     },
     {
-        id: 9,
+        id: 21,
         brand: "Adi",
         name: "Sexbomb",
         imgUrl: "../src/assets/f-3.png",

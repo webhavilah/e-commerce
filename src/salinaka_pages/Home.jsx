@@ -98,7 +98,7 @@ const Home = () => {
         </div>
         <div className="items-center h-full grid mr-10 px-10">
           <img src={logo} className="w-[150px] pb-5"alt="" />
-          <p className="text-center font-medium">© 2025</p>
+          <p className="text-center font-medium">© 2026</p>
         </div>
         <div className="">
           <h4 className="text-[13px] text-[##4A4A4A]">Fork this project  <span className="underline font-bold">HERE</span></h4>
