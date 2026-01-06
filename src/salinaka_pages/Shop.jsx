@@ -5,6 +5,7 @@ import { AiOutlineShopping } from "react-icons/ai";
 import dataFour from '../consumable/featured-four';
 import { handleScroll } from "../utils/handleScroll";
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const Shop = () => {
   const navigate = useNavigate();
