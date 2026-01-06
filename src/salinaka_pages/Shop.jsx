@@ -29,7 +29,7 @@ const Shop = () => {
 
   return (
     <div>
-      <header ref={navbar} className="h-30 fixed w-full z-50 flex items-center justify-center top-0">
+      {/* <header ref={navbar} className="h-30 fixed w-full z-50 flex items-center justify-center top-0">
         <nav className="flex justify-center items-center w-[94%]">
           <div className="w-[60%]">
             <ul className="flex items-center">
@@ -112,8 +112,8 @@ const Shop = () => {
             </div>
           </div>
         </nav>
-      </header>
-
+      </header> */}
+      <Navbar/>
       <div className="mt-26">
         <div className="w-[87%] m-auto h-auto">
           <div className="grid xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-5 h-70 w-full">
