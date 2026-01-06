@@ -15,12 +15,15 @@ const CartProvider = ({children}) => {
     const addToCart =(item)=>{
         setCart((prev) => [...prev, item]);
     }
-    const clearCartItem = ()=>{
+    const clearCartItems = ()=>{
         localStorage.setItem('cart', JSON.stringify([]));
         setCart([])
     }
+    const removeFromCart = (id) => {
+        setCart(prev => prev.filter(item => item.id !== id));
+    }
     return (
-        <CartContext.Provider value={{addToCart, clearCartItem, cart}}>
+        <CartContext.Provider value={{addToCart, clearCartItems, removeFromCart,  cart}}>
             {children}
         </CartContext.Provider>
     )
