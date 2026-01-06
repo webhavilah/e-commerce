@@ -10,24 +10,25 @@ import { SignIn } from './salinaka_pages/SignIn'
 import ForgotPassword from './salinaka_pages/ForgotPassword'
 import NotFound from './salinaka_pages/NotFound'
 import Product from './salinaka_pages/Product'
+import CartProvider from './context/CartProvider'
 
 function App() {
   return (
-    <Router>
-
+    <CartProvider>
+      <Router>
         <Routes>
-          <Route path='/' element={<Home/>}> </Route>
-          <Route path='/shop' element={<Shop/>}> </Route>
-          <Route path='/featured' element={<Featured/>}> </Route>
-          <Route path='/recommended' element={<Recommended/>}> </Route>
-          <Route path='/signup' element={<Signup/>}></Route>
-          <Route path='/signin' element={<SignIn/>}></Route>
-          <Route path='/forgot-password' element={<ForgotPassword/>}></Route>
-          <Route path='/*' element={<NotFound/>}></Route>
-          <Route path='/product/:id' element={<Product/>}></Route>
+          <Route path='/' element={<Home />}> </Route>
+          <Route path='/shop' element={<Shop />}> </Route>
+          <Route path='/featured' element={<Featured />}> </Route>
+          <Route path='/recommended' element={<Recommended />}> </Route>
+          <Route path='/signup' element={<Signup />}></Route>
+          <Route path='/signin' element={<SignIn />}></Route>
+          <Route path='/forgot-password' element={<ForgotPassword />}></Route>
+          <Route path='/*' element={<NotFound />}></Route>
+          <Route path='/product/:id' element={<Product />}></Route>
         </Routes>
-
-    </Router>
+      </Router>
+    </CartProvider>
   )
 }
 

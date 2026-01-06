@@ -32,9 +32,9 @@ const Home = () => {
               <span className="capitalize font-bold">see</span> everything
               with <span className="capitalize font-bold">clarity</span>
             </h2>
-            <p className="text-md text-[#4a4a4a] font-bold  w-md mb-4">
+            <p className="text-sm lg:text-lg text-[#4a4a4a] font-bold  lg:w-md mb-4">
               Buying eyewear should leave you happy and good-looking, with money
-              in your pocket. Glasses, sunglasses, and contacts—we’ve got your
+              in your pocket. Glasses, sunglasses, and contacts—weve got your
               eyes covered.
             </p>
             <Link to="/shop">
@@ -43,11 +43,11 @@ const Home = () => {
               </button>
             </Link>
           </div>
-          <div className="w-[50%]">
+          <div className="my-auto">
             <img
               src={image}
               style={imageStyle}
-              className=""
+              className="lg:"
               alt="salinaka's image"
             />
           </div>

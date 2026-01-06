@@ -123,7 +123,7 @@ function Signup() {
       <div className="w-screen">
         <div className="lg:mt-34 md:mt-25 bg-0 m-auto w-full md:w-screen bg-rose-800 md:pb-20">
         <div className="border border-[#C5C5C5] lg:w-[52%] md:w-[75%] m-auto w-screen">
-          <div className="lg:grid justify-between md: md:items-center md:grid w-[91%] m-auto">
+          <div className="lg:flex justify-between md: md:items-center md:grid w-[91%] m-auto">
             <div className="w-full items-center" >
               <h2 className="font-semibold text-[19px] mt-7">
                 Sign up to Salinaka
