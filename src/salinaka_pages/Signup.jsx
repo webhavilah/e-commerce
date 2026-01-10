@@ -29,7 +29,7 @@ function Signup() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-      <div className="">
+      <div className="overflow-x-hidden">
       <header
         ref={navbar}
         className="h-30 fixed w-full z-50 flex items-center justify-center top-0"
@@ -120,74 +120,74 @@ function Signup() {
         </nav>
       </header>
 
-      <div className="w-screen">
-        <div className="lg:mt-34 md:mt-25 bg-0 m-auto w-full md:w-screen bg-rose-800 md:pb-20">
-        <div className="border border-[#C5C5C5] lg:w-[52%] md:w-[75%] m-auto w-screen">
-          <div className="lg:flex justify-between md: md:items-center md:grid w-[91%] m-auto">
-            <div className="w-full items-center" >
+      <div className="w-screen overflow-x-hidden">
+        <div className="min-[901px]:mt-34 max-[900px]:mt-25 bg-0 m-auto w-full md:w-screen max-lg:pb-20">
+        <div className="border border-[#C5C5C5] xl:w-[55%] min-[901px]:w-[70%] max-[900px]:w-[70%] max-[400px]:w-[92%] m-auto w-screen">
+          <div className="min-[901px]:flex justify-between md:items-center w-[91%] m-auto">
+            <div className="w-full min-[901px]:w-[50%] items-center text-left max-[900px]:text-center" >
               <h2 className="font-semibold text-[19px] mt-7">
                 Sign up to Salinaka
               </h2>
-              <form className="w-full lg:w-90 md:pr-0">
+              <form className="w-full xs:pr-0 :w-[90%]">
                 <div className="flex flex-col mt-6">
-                  <label className="text-[13px] mb-2 pl-5 font-bold text-[#696D7B]">
+                  <label className="text-[13px] mb-2 pl-5 font-bold text-[#696D7B] text-left max-[900px]:text-center">
                     *Full name
                   </label>
                   <input
-                    className=" border border-[#C5C5C5] py-1.5 pl-5 w-full  focus:ring-0 focus: focus:outline-none placeholder:font-semibold placeholder:text-[#9C9C9C] placeholder:text-[13px]"
+                    className=" border border-[#C5C5C5] py-1.5 pl-5 w-full  focus:ring-0 focus: focus:outline-none placeholder:font-semibold placeholder:text-[#9C9C9C] placeholder:text-[13px] text-left max-[900px]:text-center"
                     type="text"
                     placeholder="John Deo"
                   />
                 </div>
                 <div className="flex flex-col mt-3">
-                  <label className="text-[13px] mb-2 pl-5 font-bold text-[#696D7B]">
+                  <label className="text-[13px] mb-2 pl-5 font-bold text-[#696D7B] text-left max-[900px]:text-center">
                     *Email
                   </label>
                   <input
-                    className=" border border-[#C5C5C5] py-1.5 pl-5 w-full focus:ring-0 focus: focus:outline-none placeholder:font-semibold placeholder:text-[#9C9C9C] placeholder:text-[13px]"
+                    className=" border border-[#C5C5C5] py-1.5 pl-5 w-full focus:ring-0 focus: focus:outline-none placeholder:font-semibold placeholder:text-[#9C9C9C] placeholder:text-[13px] text-left max-[900px]:text-center"
                     type="email"
                     placeholder="test@example.com"
                   />
                 </div>
                 <div className="flex flex-col mt-3">
-                  <label className="text-[13px] mb-2 pl-5 font-bold text-[#696D7B]">
+                  <label className="text-[13px] mb-2 pl-5 font-bold text-[#696D7B] text-left max-[900px]:text-center">
                     *Password
                   </label>
                   <input
-                    className=" border border-[#C5C5C5] py-1.5 pl-5 w-full focus:ring-0 focus: focus:outline-none placeholder:font-semibold placeholder:text-[#9C9C9C] placeholder:text-[13px]"
+                    className=" border border-[#C5C5C5] py-1.5 pl-5 w-full focus:ring-0 focus: focus:outline-none placeholder:font-semibold placeholder:text-[#9C9C9C] placeholder:text-[13px] text-left max-[900px]:text-center"
                     type="password"
                     placeholder="Your Password"
                   />
                 </div>
                 <div className="lg:mb-8 md:w-full">
-                  <button className="text-[16px] flex items-center ml-auto  my-5  bg-black text-[#F7FFFF] py-3.5 px-3 font-bold hover:bg-neutral-800 transition duration-400">
+                  <button className="max-[900px]:w-full max-[900px]:justify-center text-[16px] flex items-center ml-auto  my-5  bg-black text-[#F7FFFF] py-3.5 px-3 font-bold hover:bg-neutral-800 transition duration-400">
                     <p className="">Sign Up</p>
                     <FaArrowRight className="ml-2" />
                   </button>
                 </div>
               </form>
             </div>
-            <div className="lg:mb-4 lg:pr-5 lg:grid md:flex">
-              <div className="lg:w-[0.1px] m-auto bg-[#E1E1E1] lg:h-16 lg:mt-3 items-center md:h-[0.2vw] md:w-32"></div>
-              <p className="text-xs font-bold py-2">OR</p>
-              <div className="lg:w-[0.1px] m-auto bg-[#E1E1E1] lg:h-16 md:h-[0.2vw] md:w-32"></div>
+            <div className="min-[901px]:pb-4 min-[901px]:grid max-[900px]:flex max-[900px]:mb-5 m-auto max-[500px]:justify-baseline min-[901px]:w-auto min-[700px]:w-[70%] min-[500px]:w-full max-[900px]:py-4">
+              <div className="min-[901px]:w-[0.1px] m-auto bg-[#E1E1E1] min-[901px]:h-16 min-[901px]:mt-3 max-[900px]:h-[0.2vw] max-[500px]:w-22 max-[900px]:w-32"></div>
+              <p className="text-xs font-bold min-[901px]:py-1">OR</p>
+              <div className="min-[901px]:w-[0.1px] m-auto bg-[#E1E1E1] min-[901px]:h-16 max-[900px]:h-[0.2vw] max-[900px]:w-32 max-[500px]:w-22"></div>
             </div>
-            <div className="lg:my-auto flex flex-col gap-3 bg-lime-700">
-              <button className="flex items-center justify-center w-60 text-sm  py-3.5 gap-2 bg-[#0078FF] hover:bg-blue-600 text-[#F7FFFF] font-semibold  transition duration-200">
+            <div className="min-[901px]:my-auto flex flex-col gap-3 min-[901px]:w-auto w-full max-min-[901px]:mb-6">
+              <button className="flex items-center justify-center min-[901px]:w-60 text-sm  py-3.5 gap-2 bg-[#0078FF] hover:bg-blue-600 text-[#F7FFFF] font-semibold  transition duration-200">
                 <p className="flex items-center ">
                   <FaFacebookSquare className="w-4 h-4 right-4 relative" />{" "}
                   Continue with Facebook
                 </p>
               </button>
 
-              <button className="flex items-center justify-center w-60 text-sm  py-3.5 gap-2 border bg-[#FFFFFF] border-[#C5C5C5] text-[#3A3A3A] font-semibold hover:bg-[#0000001d] transition duration-200">
+              <button className="flex items-center justify-center lg:w-60 text-sm  py-3.5 gap-2 border bg-[#FFFFFF] border-[#C5C5C5] text-[#3A3A3A] font-semibold hover:bg-[#0000001d] transition duration-200">
                 <p className="flex items-center">
                   <FaGoogle className="w-4 h-4 ml-0 right-6 relative" />{" "}
                   Continue with Google
                 </p>
               </button>
 
-              <button className="flex items-center justify-center w-60 text-sm  py-3.5 gap-2 border bg-[#24292E] text-[#ffffff] font-semibold hover:bg-[#31373c]  transition duration-200">
+              <button className="flex items-center justify-center lg:w-60 text-sm  py-3.5 gap-2 border bg-[#24292E] text-[#ffffff] font-semibold hover:bg-[#31373c]  transition duration-200 max-[900px]:mb-10">
                 <p className=" flex items-center ">
                   <FaGithub className="w-4 h-4 right-6 relative" /> Continue
                   with Github
@@ -195,7 +195,7 @@ function Signup() {
               </button>
             </div>
           </div>
-          <div className="bg-[#f2f2f2] flex py-3.5 border-t border-[#C5C5C5] justify-center items-center space-x-7">
+          <div className="bg-[#f2f2f2] flex py-3.5 border-t border-[#C5C5C5] justify-center items-center space-x-7 object-contain">
             <p className="text-[13px] font-bold text-[#4A4A4A]">
               Already have an account?
             </p>

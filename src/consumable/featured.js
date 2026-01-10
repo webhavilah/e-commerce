@@ -39,6 +39,7 @@ const featured = [
         brand: "Tiktilaok Manok",
         name: "Sexbomb",
         imgUrl: "../src/assets/f-6.png",
+        price: 78,
     }
 ]
 export default featured;

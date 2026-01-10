@@ -7,24 +7,20 @@ const Recommended = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex w-[85%] bg-[#f3f3f3] m-auto mt-30 h-[400px] max-[350px]:h-70 justify-between">
-        <div className="w-[50%] text-[#1a1a1a] my-auto pl-10 pt-20 pb-10">
-          <h2 className="text-[50px] max-[400px]:text-3xl max-[500px]:text-4xl md:text-[40px] font-bold lg:text-[50px] xl:mr-0 mr-200">Recommended Products</h2>
+      <div className="flex flex-col lg:flex-row items-center gap-10 sm:w-[85%] w-[85%] bg-[#f3f3f3] m-auto mt-30 lg:h-[400px] lg:py-10 md:py-5 justify-between">
+        <div className=" text-[#1a1a1a] px-12 lg:w-[50%]">
+          <h2 className="lg:text-5xl text-4xl font-bold max-lg:pt-10">Recommended Products</h2>
         </div>
-
-          <div
-            className="w-[50%] h-full bg-no-repeat max-[500px]:hidden"
-            style={{
-              backgroundImage: `url(${image})`,
-              backgroundSize: "contain",
-              backgroundPosition: "left",
-              backgroundSize: "100%",
-            }}
-            
-          ></div>
+        <div className="relative overflow-hidden lg:w-[50%] sm:w-[80%] md:pl-0 lg:pl-0 h-[400px] lg:h-[400px]">
+          <img
+            src={image}
+            alt=""
+            className="object-cover scale-120 w-full h-full ml-6 items-center"
+          />
+        </div>
       </div>
-      <div className="w-[80%] m-auto mt-30 h-auto lg:pb-70 md:pb-200 pb-110 overflow-hidden">
-        <div className="mb-320 grid lg:grid-cols-3 md:grid-cols-2 md:mb-110 gap-5 h-70 lg:mb-40 sm:grid-cols-2 sm:mb-110 w-full">
+      <div className="w-[80%] m-auto mt-30 h-auto lg:pb-70 md:pb-90  pb-100 overflow-hidden">
+        <div className="mb-320 grid lg:grid-cols-3 md:grid-cols-2 md:mb-110 gap-5 h-70 lg:mb-0 sm:grid-cols-2 sm:mb-110 w-full">
           {data.map((data, id) => {
             return (
               <div

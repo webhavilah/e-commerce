@@ -33,7 +33,7 @@ const Shop = () => {
 
       <div className="mt-26">
         <div className="w-[87%] m-auto h-auto">
-          <div className="grid xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-5 h-70 w-full">
+          <div className="grid xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-5 h-70 sm:pb-0 pb-410 sm w-full">
             {dataFour.map((item, id) => (
               <div
                 key={id}
@@ -55,7 +55,7 @@ const Shop = () => {
                   <h3 className="py-4 font-bold">{item.amount}</h3>
                 </div>
 
-                <div className="absolute bottom-0 left-0 w-full mt-30 bg-black text-white text-center font-bold text-sm py-2 transform translate-y-10 group-hover:translate-y-0 transition-transform duration-300">
+                <div className="absolute bottom-0 left-0 w-full mt-30 bg-black text-white text-center font-bold text-sm py-3 transform translate-y-13 group-hover:translate-y-0 transition-transform duration-300">
                   <p>Add to basket</p>
                 </div>
               </div>
