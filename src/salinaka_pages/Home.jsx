@@ -26,19 +26,19 @@ const Home = () => {
     <div>
       <Navbar />
       <div className="home overflow-x-hidden">
-        <div className="flex w-[85%] bg-[#f3f3f3] m-auto mt-30 ">
-          <div className="w-[50%] text-[#1a1a1a] my-auto pl-10 pt-20 pb-10">
-            <h2 className="text-[50px] max-w-sm leading-14 mb-6 ">
+        <div className="lg:flex w-[85%] bg-[#f3f3f3] m-auto mt-30 ">
+          <div className="lg:w-[50%] w-[80%] text-[#1a1a1a] my-auto pl-10 lg:pt-20 pt-10 pb-10">
+            <h2 className="sm:text-4xl md:text-5xl lg:text-[50px] text-2xl max-w-sm md:leading-14 mb-6 ">
               <span className="capitalize font-bold">see</span> everything
               with <span className="capitalize font-bold">clarity</span>
             </h2>
-            <p className="text-sm lg:text-lg text-[#4a4a4a] font-bold  lg:w-md mb-4">
+            <p className="text-sm md:text-lg text-[#4a4a4a] font-bold  lg:w-md mb-4">
               Buying eyewear should leave you happy and good-looking, with money
               in your pocket. Glasses, sunglasses, and contacts—weve got your
               eyes covered.
             </p>
             <Link to="/shop">
-              <button className="flex items-center justify-between bg-black text-white py-4 px-4 font-medium hover:bg-neutral-800 transition duration-400">
+              <button className="flex items-center justify-between bg-black text-white md:py-4 md:px-4 p-3.5 font-medium hover:bg-neutral-800 transition duration-400">
                 Shop Now <FaArrowRight className="ml-2" />
               </button>
             </Link>
