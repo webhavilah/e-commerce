@@ -13,7 +13,8 @@ function Navbar() {
   const navbar = useRef(null);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [cartmenu, setCartmenu] = useState(false)
-  const { cart, clearCartItems, removeFromCart,} = useContext(CartContext)
+  const [totalPrice, setTotalPrice] = useState(0)
+  const { cart, clearCartItems, removeFromCart, addToCart,decreaseProduct,totalQuantity } = useContext(CartContext)
 
   useEffect(() => {
     const onScroll = () => {
@@ -31,6 +32,15 @@ function Navbar() {
 
   const [itemQuantity, setItemQuantity] = useState(1)
   console.log(cart)
+
+  const displayTotalPrice = () => {
+    console.log(cart.price)
+    setTotalPrice(totalPrice + 1)
+
+  }
+  useEffect(() => {
+    displayTotalPrice()
+  }, [])
 
   return (
     <>
@@ -63,9 +73,10 @@ function Navbar() {
                 <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 relative" onClick={() => setCartmenu(!cartmenu)}>
                   <AiOutlineShopping className="text-2xl  text-black" />
                   <span className="absolute top-0 right-0">
+
                     {
-                      cart.length > 0 ? (
-                        <p className="text-sm bg-red-500 rounded-[50%] size-5 text-white text-bold ">{cart.length}</p>
+                      cart ? (
+                        <p className="text-sm bg-red-500 rounded-[50%] size-5 text-white text-bold ">{totalQuantity}</p>
                       ) :
                         ''
                     }
@@ -100,15 +111,23 @@ function Navbar() {
               <IoIosSearch className="text-lg" />
               <input type="text" className="placeholder:text-[13px] xl:pr-15 lg:pr-7 focus:ring-0 focus:border-transparent focus:outline-none" placeholder="Search product..." />
             </div>
-            <div className="hover:bg-[#F2F2F2] text-center py-2.5 px-4">
-              <AiOutlineShopping className="text-2xl text-black" />
+            <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 relative" onClick={() => setCartmenu(!cartmenu)}>
+              <AiOutlineShopping className="text-2xl  text-black" />
+              <span className="absolute top-0 right-0">
+                {
+                  cart.length > 0 ? (
+                    <p className="text-sm bg-red-500 rounded-[50%] size-5 text-white text-bold ">{cart.length}</p>
+                  ) :
+                    ''
+                }
+              </span>
             </div>
           </div>
         </div>
         {
           // cartmenu && (
           <div className="flex justify-end">
-            <div className={`h-screen fixed w-44/100 z-20 bg-white shadow-2xl py-7 transition-all duration-300 ease-in-out ${cartmenu ? "translate-x-0" : "translate-x-full"}`}>
+            <div className={`h-screen fixed md:w-[70vw] lg:w-[50vw] xl:w-[44vw] sm:w-[80vw]  w-full  z-20 bg-white shadow-2xl py-7 transition-all duration-300 ease-in-out ${cartmenu ? "translate-x-0" : "translate-x-full"}`}>
               <div className="flex  justify-between items-center w-90/100 m-auto">
                 <div className="flex space-x-3 items-center">
                   <h3 className="font-bold">My Basket</h3>
@@ -124,17 +143,19 @@ function Navbar() {
                   <div className="overflow-y-auto max-h-[90%] ">
                     {
                       cart.map((item, id) => {
-                        const totalPrice = item.price * (itemQuantity);
+                        const totalPrice = item.price * (item.quantity);
                         return (
                           <div key={id} className="w-full">
                             <div className="w-9/10 border border-gray-200 flex my-3 m-auto shadow-sm">
                               <div className="flex flex-col w-7/100">
-                                <button onClick={() => setItemQuantity((prev) => prev + 1)} className="border border-gray-300 m-auto w-full py-3">+</button>
+                                <button onClick={() => {
+                                  addToCart(item)
+                                  console.log(item)
+                                }} className="border border-gray-300 m-auto w-full py-3">+</button>
                                 <button
-                                  disabled={itemQuantity === 1}
-                                  onClick={() =>
-                                    setItemQuantity(prev => prev -1)} className={`border border-gray-300 m-auto w-full py-3
-                                  ${itemQuantity === 1 ? "cursor-not-allowed opacity-50" : ""}`} >
+                                  disabled={item.quantity === 1}
+                                  onClick={() => decreaseProduct(item)} className={`border border-gray-300 m-auto w-full py-3
+                                  ${item.quantity === 1 ? "cursor-not-allowed opacity-50" : ""}`} >
                                   -
                                 </button>
                               </div>
@@ -144,20 +165,20 @@ function Navbar() {
                                 </div>
                                 <div className="w-25/100">
                                   <h3 onClick={() => navigate(`/product/${id}`)} className=" text-gray-900 font-semibold mb-2 cursor-pointer underline ">{item.brand}</h3>
-                                  <div className="space-y-1"> 
+                                  <div className="space-y-1">
                                     <p className="text-gray-500 text-[13px] font-semibold ">Quantity</p>
-                                    <p className="font-semibold text-sm ">{itemQuantity}</p>
+                                    <p className="font-semibold text-sm ">{item.quantity}</p>
                                   </div>
                                 </div>
                                 <div className="text-black w-25/100 h-full pt-11 space-y-1 ">
-                                    <p className="text-gray-500 text-[13px] font-semibold">Size</p>
-                                    <p className="font-semibold text-sm">28mm</p>
+                                  <p className="text-gray-500 text-[13px] font-semibold">Size</p>
+                                  <p className="font-semibold text-sm">28mm</p>
                                 </div>
 
-                                <div className="text-lg font-semibold w-20/100"> ${totalPrice} </div>
+                                <div className="text-lg font-semibold w-20/100"> ${totalPrice}.00 </div>
                               </div>
                               <div className="flex items-center justify-center w-2/10 ">
-                                  <p className="text-xl border border-gray-300 p-3" onClick={()=>removeFromCart(item.id)}><IoMdClose /></p>
+                                <p className="text-xl border border-gray-300 p-3" onClick={() => removeFromCart(item.id)}><IoMdClose /></p>
                               </div>
                             </div>
                           </div>
@@ -176,16 +197,16 @@ function Navbar() {
               <div className=" h-[20%] flex justify-between items-center w-95/100 m-auto">
                 <div className="flex justify-between space-y-5 w-5/10 flex-col mb-3">
                   <p className="font-semibold text-[11px] text-gray-900">Subtotal amount:</p>
-                  <h3 className="font-semibold text-2xl"></h3>
+                  <h3 className="font-semibold text-2xl"> ${
+                    cart.reduce((prev, item) => {
+                      return prev + item.price * (item.quantity)
+                    }, 0)
+                  }.00
+
+                  </h3>
                 </div>
                 <div className="">
-                  {
-                    cart.length > 0 ? (
-                      <button className=" hover:bg-neutral-800 text-white py-3 px-6 font-semibold uppercase bg-black transition duration-1000">Check Out</button>
-                    ) : (
-                      <button className=" hover:bg-neutral-400 text-white py-3 px-6 font-semibold uppercase bg-neutral-500 transition cursor-not-allowed">Check Out</button>
-                    )
-                  }
+                <button className={`${cart.length > 0 ? "bg-black " : "bg-neutral-500 cursor-not-allowed "} hover:bg-neutral-800 text-white py-3 px-6 font-semibold uppercase bg-black transition duration-1000`}>Check Out</button>
                 </div>
               </div>
 

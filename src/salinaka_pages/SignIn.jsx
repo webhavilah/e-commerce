@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import logo from "../assets/salinaka-logo.png";
 import { IoIosSearch } from "react-icons/io";
 import { AiOutlineShopping } from "react-icons/ai";
@@ -8,6 +8,7 @@ import { handleScroll } from "../utils/handleScroll";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { CartContext } from "../context/CartContext";
 export const SignIn = () => {
   const navigate = useNavigate();
   const navbar = useRef(null);
@@ -26,6 +27,9 @@ export const SignIn = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const { cart} = useContext(CartContext)
+
 
   return (
     <div className="">
@@ -91,9 +95,17 @@ export const SignIn = () => {
                   placeholder="Search product..."
                 />
               </div>
-              <div className="hover:bg-[#F2F2F2] text-center py-2.5 px-4 ">
-                <AiOutlineShopping className="text-2xl text-black " />
-              </div>
+              <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 relative cursor-not-allowed" onClick={() => setCartmenu(!cartmenu)}>
+                  <AiOutlineShopping className="text-2xl  text-black" />
+                  <span className="absolute top-0 right-0">
+                    {
+                      cart.length > 0 ? (
+                        <p className="text-sm bg-red-500 rounded-[50%] size-5 text-white text-bold ">{cart.length}</p>
+                      ) :
+                        ''
+                    }
+                  </span>
+                </div>
             </div>
             <div className=" w-[30%] flex items-center space-x-3.5 justify-center">
               <Link to="/signup">

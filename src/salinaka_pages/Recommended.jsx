@@ -2,14 +2,16 @@ import React from "react";
 import data from "../consumable/featured";
 import image from "../assets/Recommended page image.png";
 import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const Recommended = () => {
+  const navigate = useNavigate() 
   return (
     <div>
       <Navbar />
       <div className="flex w-[85%] bg-[#f3f3f3] m-auto mt-30 h-[400px] justify-between">
         <div className="w-[50%] text-[#1a1a1a] my-auto pl-10 pt-20 pb-10">
-          <h2 className="text-[50px] font-bold">Featured Products</h2>
+          <h2 className="text-[50px] font-bold">Recommended Products</h2>
         </div>
 
           <div
@@ -30,6 +32,7 @@ const Recommended = () => {
               <div
                 key={id}
                 className="w-full gap-6 border border-[#E5E5E5] shadow-sm cursor-pointer "
+                onClick={() => navigate(`/product/${id}`)}
               >
                 <div className="h-[200px] bg-[#F2F2F2] ">
                   <img
