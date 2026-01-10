@@ -14,7 +14,7 @@ function Navbar() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [cartmenu, setCartmenu] = useState(false)
   const [totalPrice, setTotalPrice] = useState(0)
-  const { cart, clearCartItems, removeFromCart, addToCart,decreaseProduct,totalQuantity } = useContext(CartContext)
+  const { cart, clearCartItems, removeFromCart, addToCart, decreaseProduct, totalQuantity } = useContext(CartContext)
 
   useEffect(() => {
     const onScroll = () => {
@@ -73,13 +73,7 @@ function Navbar() {
                 <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 relative" onClick={() => setCartmenu(!cartmenu)}>
                   <AiOutlineShopping className="text-2xl  text-black" />
                   <span className="absolute top-0 right-0">
-
-                    {
-                      cart ? (
-                        <p className="text-sm bg-red-500 rounded-[50%] size-5 text-white text-bold ">{totalQuantity}</p>
-                      ) :
-                        ''
-                    }
+                    <p className={` ${totalQuantity ? 'text-sm bg-red-500 rounded-[50%] size-5 text-white text-bold ' : ''}`}>{totalQuantity}</p>
                   </span>
                 </div>
               </div>
@@ -206,7 +200,7 @@ function Navbar() {
                   </h3>
                 </div>
                 <div className="">
-                <button className={`${cart.length > 0 ? "bg-black " : "bg-neutral-500 cursor-not-allowed "} hover:bg-neutral-800 text-white py-3 px-6 font-semibold uppercase bg-black transition duration-1000`}>Check Out</button>
+                  <button className={`${cart.length > 0 ? "bg-black " : "bg-neutral-500 cursor-not-allowed "} hover:bg-neutral-800 text-white py-3 px-6 font-semibold uppercase bg-black transition duration-1000`}>Check Out</button>
                 </div>
               </div>
 
