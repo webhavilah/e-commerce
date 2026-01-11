@@ -5,6 +5,7 @@ import data from "../consumable/featured";
 import dataTwo from "../consumable/featured-two";
 import { FaAngleDown } from "react-icons/fa";
 import { CartContext } from "../context/CartContext";
+import { toast } from "react-toastify";
 
 const Product = () => {
     const { id } = useParams();
@@ -48,7 +49,22 @@ const Product = () => {
                             </div>
                             <button disabled={isInCart} onClick={() => {
                                     addToCart(item);
-                                    alert(`${item.brand} added to cart`);
+                                    toast.success(`${item.brand} added to cart`, {
+                                        icon: false,
+                                        hideProgressBar: true, // removes the timer line
+                                        autoClose: 1000,
+                                        style: {
+                                          backgroundColor: "#bbf7d0", // light green
+                                          color: "#14532d",           // dark green text
+                                          borderRadius: "5px",
+                                          fontWeight: "600",
+                                          width: "auto",
+                                          fontSize: "12px",
+                                          border: "1px solid #14532d",
+                                          fontFamily: "Tajawal, 'sans-serif'",
+                                          marginTop: "100px", marginRight: "40px",
+                                        },
+                                      });
                                 }} className={`flex items-center justify-between text-sm py-3 px-4 font-medium capitalize transition duration-400 
                                     ${ isInCart ? 
                                         "bg-gray-400 cursor-not-allowed text-white" : 

@@ -53,7 +53,7 @@ const Shop = () => {
                   <p className="text-[#BBB6B6] font-bold pt-1 italic text-[13px]">
                     {item.name}
                   </p>
-                  <h3 className="py-4 font-bold">{item.amount}</h3>
+                  <h3 className="py-4 font-bold">${item.amount}.00</h3>
                 </div>
 
                 <div className="absolute bottom-0 left-0 w-full mt-30 bg-black text-white text-center font-bold text-sm py-3 transform translate-y-13 group-hover:translate-y-0 transition-transform duration-300">
