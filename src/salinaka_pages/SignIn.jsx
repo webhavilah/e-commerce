@@ -101,11 +101,15 @@ export const SignIn = () => {
                   placeholder="Search product..."
                 />
               </div>
-              <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 relative cursor-not-allowed" onClick={() => setCartmenu(!cartmenu)}>
+              <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 relative cursor-not-allowed">
                 <AiOutlineShopping className="text-2xl  text-black" />
                 <span className="absolute top-0 right-0">
-                  <p className={` ${totalQuantity ? 'text-sm bg-red-500 rounded-[50%] size-5 text-white text-bold ' : ''}`}>{totalQuantity}</p>
-                </span>
+                      {
+                        cart.length > 0 ? 
+                        <p className="text-sm bg-red-500 rounded-[50%] size-5 text-white text-bold">{totalQuantity}</p> :
+                        ''
+                      }
+                  </span>
               </div>
             </div>
 
@@ -123,6 +127,7 @@ export const SignIn = () => {
 
             <button onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}>
                 <IoMenuSharp className="text-3xl cursor-pointer lg:hidden" />
+                
               </button>
           </div>
         </nav>
@@ -147,14 +152,13 @@ export const SignIn = () => {
             </div>
             <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 relative" onClick={() => setCartmenu(!cartmenu)}>
               <AiOutlineShopping className="text-2xl  text-black" />
-              <span className="absolute top-0 right-0">
-                {
-                  cart.length > 0 ? (
-                    <p className="text-sm bg-red-500 rounded-[50%] size-5 text-white text-bold ">{totalQuantity}</p>
-                  ) :
-                    ''
-                }
-              </span>
+                  <span className="absolute top-0 right-0">
+                      {
+                        cart.length > 0 ? 
+                        <p className="text-sm bg-red-500 rounded-[50%] size-5 text-white text-bold">{totalQuantity}</p> :
+                        ''
+                      }
+                  </span>
             </div>
             
         </div>
