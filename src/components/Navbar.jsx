@@ -139,8 +139,8 @@ function Navbar() {
                   <p className="font-semibold text-[13px] text-gray-600">( {cart.length} item)</p>
                 </div>
                 <div className="flex">
-                  <button className="py-2 cursor-pointer border border-zinc-300 px-4 font-semibold text-[13px] text-gray-800" onClick={() => setCartmenu(!cartmenu)}>Close</button>
-                  <button className={`${cart.length === 0 ? 'cursor-not-allowed text-gray-400' : " cursor-pointer text-gray-600"}py-2  border border-zinc-200 px-4 font-semibold text-[13px]`} onClick={() => clearCartItems()}>Clear Basket</button>
+                  <button className="py-2 cursor-pointer border border-zinc-300 px-4 font-semibold text-[13px] text-gray-800 max-[400px]:px-3 max-[400px]:py-1.5 max-[400px]:text-[12px]" onClick={() => setCartmenu(!cartmenu)}>Close</button>
+                  <button className={`${cart.length === 0 ? 'cursor-not-allowed text-gray-400' : " cursor-pointer text-gray-600"}py-2  border border-zinc-200 px-4 font-semibold text-[13px] max-[400px]:text-[12px]`} onClick={() => clearCartItems()}>Clear Basket</button>
                 </div>
               </div>
               <div className="h-[80%] ">
@@ -164,9 +164,9 @@ function Navbar() {
                                   -
                                 </button>
                               </div>
-                              <div className="flex items-center  w-10/10">
-                                <div className="w-[30%]">
-                                  <img src={item.imgUrl} className="h-17" alt="" />
+                              <div className="flex items-center w-10/10">
+                                <div className="w-[30%] max-[412px]:mr-2 ">
+                                  <img src={item.imgUrl} className="h-17 w-full" alt="" />
                                 </div>
                                 <div className="w-25/100">
                                   <h3 onClick={() => navigate(`/product/${id}`)} className=" text-gray-900 font-semibold mb-2 cursor-pointer underline ">{item.brand}</h3>
@@ -175,12 +175,12 @@ function Navbar() {
                                     <p className="font-semibold text-sm ">{item.quantity}</p>
                                   </div>
                                 </div>
-                                <div className="text-black w-25/100 h-full pt-11 space-y-1 ">
+                                <div className="text-black w-25/100 h-full pt-11 space-y-1 max-[412px]:ml-2">
                                   <p className="text-gray-500 text-[13px] font-semibold">Size</p>
                                   <p className="font-semibold text-sm">28mm</p>
                                 </div>
 
-                                <div className="text-lg font-semibold w-20/100"> ${totalPrice}.00 </div>
+                                <div className="text-lg font-semibold w-20/100 max-[412px]:text-[16px] max-[412px]:mr-6"> ${totalPrice}.00 </div>
                               </div>
                               <div className="flex items-center justify-center w-2/10 ">
                                 <p className="text-xl border border-gray-300 p-3" onClick={() => removeFromCart(item.id)}><IoMdClose /></p>

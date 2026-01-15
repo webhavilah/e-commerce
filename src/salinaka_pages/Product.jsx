@@ -27,7 +27,7 @@ const Product = () => {
     return (
         <>
             <Navbar />
-            <div className=" sm:mt-40 pt-[10vh]">
+            <div className=" sm:mt-40 pt-[10vh] sm:pt-0 ">
                 <div className="sm:flex justify-center items-center sm:w-[70%] w-[80%] border border-gray-200 m-auto bg-[#f9f9f9] ">
                     <div className="sm:w-1/2 z-20 sm:h-auto h-50 flex justify-center items-center" >
                         <img src={item.imgUrl} className="w-auto bg-[#f9ff9] h-40 sm:h-auto" alt="" />
