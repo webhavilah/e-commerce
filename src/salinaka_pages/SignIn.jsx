@@ -103,8 +103,15 @@ export const SignIn = () => {
                   placeholder="Search product..."
                 />
               </div>
-              <div className="hover:bg-[#F2F2F2] text-center py-2.5 px-4 ">
-                <AiOutlineShopping className="text-2xl text-[#7A7A7A] " />
+              <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 relative cursor-not-allowed">
+                <AiOutlineShopping className="text-2xl  text-black" />
+                <span className="absolute top-0 right-0">
+                      {
+                        cart.length > 0 ? 
+                        <p className="text-sm bg-red-500 rounded-[50%] size-5 text-white text-bold">{totalQuantity}</p> :
+                        ''
+                      }
+                  </span>
               </div>
             </div>
 
