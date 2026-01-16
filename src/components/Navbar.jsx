@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import logo from "../assets/salinaka-logo.png";
+import logo from "/images/salinaka-logo.png";
 import { IoIosSearch } from "react-icons/io";
 import { AiOutlineShopping } from "react-icons/ai";
 import { Link, NavLink, useNavigate } from "react-router-dom";

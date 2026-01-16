@@ -3,6 +3,7 @@ import dataFour from '../consumable/featured-four';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import React, {useEffect, useRef} from "react";
+import Footer from '../components/Footer';
 const Shop = () => {
   const navigate = useNavigate();
     const navbar = useRef(null);
@@ -28,9 +29,9 @@ const Shop = () => {
     <div>
       <Navbar />
 
-      <div className="mt-26">
-        <div className="w-[87%] m-auto h-auto">
-          <div className="grid xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-5 h-70 sm:pb-0 pb-410 sm w-full">
+      <div className="mt-32">
+        <div className="w-[87%] m-auto h-auto min-h-screen">
+          <div className="grid xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-5 h-70 sm:pb-0 pb-40  sm w-full">
             {dataFour.map((item, id) => (
               <div
                 key={id}
@@ -61,6 +62,8 @@ const Shop = () => {
           </div>
         </div>
       </div>
+
+      <Footer/>
     </div>
   );
 };
