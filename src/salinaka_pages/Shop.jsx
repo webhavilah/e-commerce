@@ -1,9 +1,6 @@
-import logo from "../assets/salinaka-logo.png";
-import { IoIosSearch } from "react-icons/io";
-import { AiOutlineShopping } from "react-icons/ai";
+
 import dataFour from '../consumable/featured-four';
-import { handleScroll } from "../utils/handleScroll";
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import React, {useEffect, useRef} from "react";
 const Shop = () => {

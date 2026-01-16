@@ -5,7 +5,7 @@ import image from "../assets/salinaka image.png";
 import data from "../consumable/featured";
 import dataTwo from "../consumable/featured-two";
 import Navbar from "../components/Navbar";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import HomeProduct from "../components/HomeProduct";
  
 const Home = () => {
@@ -13,14 +13,6 @@ const Home = () => {
     height: "100%",
     width: "100%",
   };
-
-  // const handleClick = ()=>{
-    // const navigate = useNavigate()
-  // }
-    
-    // if ("box" === onClick) {
-    //     id == 1
-    // }
 
   return (
     <div>

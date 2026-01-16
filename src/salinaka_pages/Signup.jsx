@@ -127,7 +127,7 @@ function Signup() {
                   <IoIosSearch className="text-lg" />
                   <input type="text" className="placeholder:text-[13px] xl:pr-15 lg:pr-7 focus:ring-0 focus:border-transparent focus:outline-none" placeholder="Search product..." />
                 </div>
-                <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 relative" onClick={() => setCartmenu(!cartmenu)}>
+                <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 relative" >
                   <AiOutlineShopping className="text-2xl  text-black" />
                   <span className="absolute top-0 right-0">
                     {
