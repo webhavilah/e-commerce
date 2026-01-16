@@ -1,9 +1,12 @@
 import React from "react";
 import data from "../consumable/featured";
-import image from "../assets/Recommended page image.png";
+import image from "/images/Recommended-image.png";
 import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Recommended = () => {
+  const navigate = useNavigate() 
   return (
     <div>
       <Navbar />
@@ -19,13 +22,14 @@ const Recommended = () => {
           />
         </div>
       </div>
-      <div className="w-[80%] m-auto mt-30 h-auto lg:pb-70 md:pb-90  pb-100 overflow-hidden">
+      <div className="w-[80%] m-auto mt-30 mb-20 h-auto lg:pb-100 md:pb-90 pb-100 overflow-hidden">
         <div className="mb-320 grid lg:grid-cols-3 md:grid-cols-2 md:mb-110 gap-5 h-70 lg:mb-0 sm:grid-cols-2 sm:mb-110 w-full">
           {data.map((data, id) => {
             return (
               <div
                 key={id}
                 className="w-full gap-6 border border-[#E5E5E5] shadow-sm cursor-pointer "
+                onClick={() => navigate(`/product/${id}`)}
               >
                 <div className="h-[200px] bg-[#F2F2F2] ">
                   <img
@@ -48,6 +52,7 @@ const Recommended = () => {
           })}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
