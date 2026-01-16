@@ -11,10 +11,12 @@ import ForgotPassword from './salinaka_pages/ForgotPassword'
 import NotFound from './salinaka_pages/NotFound'
 import Product from './salinaka_pages/Product'
 import CartProvider from './context/CartProvider'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
   return (
     <CartProvider>
+      <ToastContainer closeButton={false}/>
       <Router>
         <Routes>
           <Route path='/' element={<Home />}> </Route>

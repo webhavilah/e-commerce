@@ -1,7 +1,8 @@
 import dataThree from "../consumable/featured-three";
-import imageTwo from "../assets/salinaka-f-image.png";
+import imageTwo from "/images/salinaka-f-image.png";
 import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Featured = () => {
   const navigate = useNavigate();
@@ -45,6 +46,7 @@ const Featured = () => {
           })}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

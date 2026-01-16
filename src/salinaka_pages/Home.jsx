@@ -1,26 +1,19 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import logo from "../assets/salinaka-logo.png";
-import image from "../assets/salinaka image.png";
+import logo from "/images/salinaka-logo.png";
+import image from "/images/salinaka image.png";
 import data from "../consumable/featured";
 import dataTwo from "../consumable/featured-two";
 import Navbar from "../components/Navbar";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import HomeProduct from "../components/HomeProduct";
+import Footer from "../components/Footer";
  
 const Home = () => {
   const imageStyle = {
     height: "100%",
     width: "100%",
   };
-
-  // const handleClick = ()=>{
-    // const navigate = useNavigate()
-  // }
-    
-    // if ("box" === onClick) {
-    //     id == 1
-    // }
 
   return (
     <div>
@@ -55,56 +48,7 @@ const Home = () => {
       </div>
      <HomeProduct data={data} sectionName='Featured Products' navigateTo='featured'/>
      <HomeProduct data={dataTwo} sectionName='Recommended Products' navigateTo='recommended'/>
-     
-      {/* <div className=" w-[80%] m-auto mt-20 h-auto pb-100">
-        <div className="flex w-full justify-between">
-          <h1 className="text-black font-medium text-4xl pb-7">
-            Recommended Products
-          </h1>
-          <h2 className="float-r font-100 text-xl underline">See All</h2>
-        </div>
-        <div className="grid lg:grid-cols-3 gap-5 h-70 mb-10 w-full">
-          {dataTwo.map((dataTwo, id) => {
-            return (
-              <div
-                key={id}
-                className="w-full gap-6 border border-[#E5E5E5] shadow-sm cursor-pointer "
-              >
-                <div className="h-[200px] bg-[#F2F2F2] ">
-                  <img
-                    src={dataTwo.imgUrl}
-                    alt={dataTwo.brand + "'s image"}
-                    className=" mx-auto w-74 h-full hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <div className="bg-[#F9F9F9] p-4">
-                  <h2 className="font-medium text-2xl">{dataTwo.brand}</h2>
-                  <p
-                    className="text-[#8E8E8E] font-medium "
-                    style={{ fontStyle: "italic", fontSize: "17px" }}
-                  >
-                    {dataTwo.name}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div> */}
-      <div className="bg-[#F0F0F0] h-46 flex w-full">
-        <div className="flex w-[93%] justify-between m-auto h-30 items-center">
-          <div className="">
-          <h4 className="text-[13px] text-[##4A4A4A]">Developed by <span className="underline font-bold"> Ayanfe & HAVILAH</span></h4>
-        </div>
-        <div className="items-center h-full grid mr-10 px-10">
-          <img src={logo} className="w-[150px] pb-5"alt="" />
-          <p className="text-center font-medium">© 2026</p>
-        </div>
-        <div className="">
-          <h4 className="text-[13px] text-[##4A4A4A]">Fork this project  <span className="underline font-bold">HERE</span></h4>
-        </div>
-        </div>
-      </div>
+    <Footer/>
     </div>
   );
 };
