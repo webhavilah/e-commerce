@@ -28,7 +28,7 @@ const Shop = () => {
       <Navbar />
 
       {/* MAIN CONTENT */}
-      <main className="flex-grow mt-32">
+      <main className="grow mt-32">
         <div className="w-[87%] m-auto">
           <div className="grid xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-5 pb-40">
             {dataFour.map((item, id) => (

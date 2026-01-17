@@ -101,7 +101,7 @@ export const SignIn = () => {
                   type="text"
                   className=" placeholder:text-[13px] xl:pr-15 lg:pr-7 focus:ring-0 focus:border-transparent focus:outline-none"
                   placeholder="Search product..."
-                />
+                />  
               </div>
               <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 relative cursor-not-allowed">
                 <AiOutlineShopping className="text-2xl  text-black" />
