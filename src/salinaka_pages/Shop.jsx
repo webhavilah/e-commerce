@@ -28,7 +28,7 @@ const Shop = () => {
       <Navbar />
 
       {/* MAIN CONTENT */}
-      <main className="flex-grow mt-32">
+      <main className="grow mt-32">
         <div className="w-[87%] m-auto">
           <div className="grid xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-5 pb-40">
             {dataFour.map((item, id) => (
@@ -45,8 +45,8 @@ const Shop = () => {
                 </div>
 
                 <div className="bg-[#F9F9F9] text-center flex-1">
-                  <h2 className="font-bold text-[14px]">{item.brand}</h2>
-                  <p className="text-[#BBB6B6] font-bold italic text-[13px]">
+                  <h2 className="font-bold text-[14px] mt-5">{item.brand}</h2>
+                  <p className="text-[#BBB6B6] font-bold italic text-[13px] mt-3">
                     {item.name}
                   </p>
                   <h3 className="py-4 font-bold">${item.amount}.00</h3>

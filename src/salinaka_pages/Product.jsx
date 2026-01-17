@@ -55,7 +55,7 @@ const Product = () => {
                                         autoClose: 1000,
                                         style: {
                                           backgroundColor: "#bbf7d0", 
-                                          color: "#14532d",           
+                                          color: "#14532d",             
                                           borderRadius: "5px",
                                           fontWeight: "600",
                                           width: "auto",

@@ -30,11 +30,9 @@ export const SignIn = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const {cart, totalQuantity } = useContext(CartContext)
+  const { cart, totalQuantity } = useContext(CartContext);
 
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-
-
 
   return (
     <div className="">
@@ -52,7 +50,8 @@ export const SignIn = () => {
               <NavLink
                 onClick={handleScroll}
                 className={({ isActive }) =>
-                  `${isActive ? "text-black" : "text-gray-500"
+                  `${
+                    isActive ? "text-black" : "text-gray-500"
                   } text-sm font-semibold hover:bg-[#0000000e] px-4 py-2.5`
                 }
                 to="/"
@@ -62,7 +61,8 @@ export const SignIn = () => {
               <NavLink
                 onClick={handleScroll}
                 className={({ isActive }) =>
-                  `${isActive ? "text-black" : "text-gray-500"
+                  `${
+                    isActive ? "text-black" : "text-gray-500"
                   } text-sm font-semibold hover:bg-[#0000000e] px-4 py-2.5`
                 }
                 to="/shop"
@@ -72,7 +72,8 @@ export const SignIn = () => {
               <NavLink
                 onClick={handleScroll}
                 className={({ isActive }) =>
-                  `${isActive ? "text-black" : "text-gray-500"
+                  `${
+                    isActive ? "text-black" : "text-gray-500"
                   } text-sm font-semibold hover:bg-[#0000000e] px-4 py-2.5`
                 }
                 to="/featured"
@@ -82,7 +83,8 @@ export const SignIn = () => {
               <NavLink
                 onClick={handleScroll}
                 className={({ isActive }) =>
-                  `${isActive ? "text-black" : "text-gray-500"
+                  `${
+                    isActive ? "text-black" : "text-gray-500"
                   } text-sm font-semibold hover:bg-[#0000000e] px-4 py-2.5`
                 }
                 to="/recommended"
@@ -99,7 +101,7 @@ export const SignIn = () => {
                   type="text"
                   className=" placeholder:text-[13px] xl:pr-15 lg:pr-7 focus:ring-0 focus:border-transparent focus:outline-none"
                   placeholder="Search product..."
-                />
+                />  
               </div>
               <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 relative cursor-not-allowed">
                 <AiOutlineShopping className="text-2xl  text-black" />
@@ -126,56 +128,111 @@ export const SignIn = () => {
             </div>
 
             <button onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}>
-                <IoMenuSharp className="text-3xl cursor-pointer lg:hidden" />
-                
-              </button>
+              <IoMenuSharp className="text-3xl cursor-pointer lg:hidden" />
+            </button>
           </div>
         </nav>
       </header>
+
+      <div
+        className={`lg:hidden shadow-lg flex flex-col w-auto sm:w-60 sm:py-0 pb-7 pt-4 pl-5  h-auto fixed z-10 top-[15vh] right-0 justify-center bg-white
+            transition-transform duration-300 ease-out 
+            ${isMobileNavOpen ? "translate-x-0 right-4" : "translate-x-full"}`}
+      >
+        <div className="flex flex-col sm:mt-3">
+          <NavLink
+            onClick={handleScroll}
+            className={({ isActive }) =>
+              `${
+                isActive ? "text-black" : "text-gray-500"
+              } text-sm font-semibold hover:bg-[#0000000e] px-4 py-2.5`
+            }
+            to="/"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            onClick={handleScroll}
+            className={({ isActive }) =>
+              `${
+                isActive ? "text-black" : "text-gray-500"
+              } text-sm font-semibold hover:bg-[#0000000e] px-4 py-2.5`
+            }
+            to="/shop"
+          >
+            Shop
+          </NavLink>
+          <NavLink
+            onClick={handleScroll}
+            className={({ isActive }) =>
+              `${
+                isActive ? "text-black" : "text-gray-500"
+              } text-sm font-semibold hover:bg-[#0000000e] px-4 py-2.5`
+            }
+            to="/featured"
+          >
+            Featured
+          </NavLink>
+          <NavLink
+            onClick={handleScroll}
+            className={({ isActive }) =>
+              `${
+                isActive ? "text-black" : "text-gray-500"
+              } text-sm font-semibold hover:bg-[#0000000e] px-4 py-2.5`
+            }
+            to="/recommended"
+          >
+            Recommended
+          </NavLink>
+        </div>
+        <div className="items-center xl:w-[60%] lg:w-[50%] mr-10 flex sm:hidden">
+          <div className="bg-white flex space-x-3 border border-[#E5E5E5] items-center px-4 py-2">
+            <IoIosSearch className="text-lg" />
+            <input
+              type="text"
+              className="placeholder:text-[13px] xl:pr-15 lg:pr-7 focus:ring-0 focus:border-transparent focus:outline-none"
+              placeholder="Search product..."
+            />
+          </div>
+          <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 relative">
+            <AiOutlineShopping className="text-2xl  text-black" />
+            <span className="absolute top-0 right-0">
+              {cart.length > 0 ? (
+                <p className="text-sm bg-red-500 rounded-[50%] size-5 text-white text-bold">
+                  {totalQuantity}
+                </p>
+              ) : (
+                ""
+              )}
+            </span>
+          </div>
+        </div>
+        <div className="flex mt-5 mb-0 sm:mb-6 space-x-4 sm:mt-2">
+          <button
+            onClick={() => {
+              handleScroll();
+              navigate("/signup");
+            }}
+            className="bg-black text-white text-[12px] font-semibold py-2 px-4 hover:bg-neutral-800"
+          >
+            Sign Up
+          </button>
+          <button
+            onClick={() => {
+              handleScroll();
+              navigate("/signin");
+            }}
+            className="bg-[#f2f2f2] text-gray-500 text-[12px] font-semibold py-2 px-4 border border-[#DFDFDF] hover:bg-white"
+          >
+            Sign In
+          </button>
+        </div>
+      </div>
 
       <div className="min-[901px]:mt-40 max-[900px]:mt-25 bg-0 m-auto w-full md:w-screen max-lg:pb-20">
         <div className="border border-[#C5C5C5] xl:w-[52%] min-[901px]:w-[70%] max-[900px]:w-[70%] max-[400px]:w-[92%] m-auto w-screen">
           <div className="min-[901px]:flex justify-between md:items-center w-[93%] m-auto">
             <div className="w-full min-[901px]:w-[50%] items-center text-left max-[900px]:text-center">
-      <div
-          className={`lg:hidden shadow-lg flex flex-col w-auto sm:w-60 sm:py-0 pb-7 pt-4 pl-5  h-auto fixed z-10 top-[15vh] right-0 justify-center bg-white
-        transition-transform duration-300 ease-out 
-        ${isMobileNavOpen ? "translate-x-0 right-4" : "translate-x-full"}`}
-        >
-        <div className="flex flex-col sm:mt-3">
-        <NavLink onClick={handleScroll} className={({ isActive }) => `${isActive ? "text-black" : "text-gray-500"} text-sm font-semibold hover:bg-[#0000000e] px-4 py-2.5`} to="/">Home</NavLink>
-          <NavLink onClick={handleScroll} className={({ isActive }) => `${isActive ? "text-black" : "text-gray-500"} text-sm font-semibold hover:bg-[#0000000e] px-4 py-2.5`} to="/shop">Shop</NavLink>
-          <NavLink onClick={handleScroll} className={({ isActive }) => `${isActive ? "text-black" : "text-gray-500"} text-sm font-semibold hover:bg-[#0000000e] px-4 py-2.5`} to="/featured">Featured</NavLink>
-          <NavLink onClick={handleScroll} className={({ isActive }) => `${isActive ? "text-black" : "text-gray-500"} text-sm font-semibold hover:bg-[#0000000e] px-4 py-2.5`} to="/recommended">Recommended</NavLink>
-
-        </div>
-          <div className="items-center xl:w-[60%] lg:w-[50%] mr-10 flex sm:hidden">
-            <div className="bg-white flex space-x-3 border border-[#E5E5E5] items-center px-4 py-2">
-              <IoIosSearch className="text-lg" />
-              <input type="text" className="placeholder:text-[13px] xl:pr-15 lg:pr-7 focus:ring-0 focus:border-transparent focus:outline-none" placeholder="Search product..." />
-            </div>
-            <div className=" hover:bg-[#d3d3d335] text-center py-2.5 px-4 relative" >
-              <AiOutlineShopping className="text-2xl  text-black" />
-                  <span className="absolute top-0 right-0">
-                      {
-                        cart.length > 0 ? 
-                        <p className="text-sm bg-red-500 rounded-[50%] size-5 text-white text-bold">{totalQuantity}</p> :
-                        ''
-                      }
-                  </span>
-            </div>
-            
-        </div>
-            <div className="flex mt-5 mb-0 sm:mb-6 space-x-4 sm:mt-2">
-                <button onClick={() => { handleScroll(); navigate("/signup"); }} className="bg-black text-white text-[12px] font-semibold py-2 px-4 hover:bg-neutral-800">Sign Up</button>
-                <button onClick={() => { handleScroll(); navigate("/signin"); }} className="bg-[#f2f2f2] text-gray-500 text-[12px] font-semibold py-2 px-4 border border-[#DFDFDF] hover:bg-white">Sign In</button>
-              </div>
-          </div>
-
-      <div className="mt-40 w-full m-auto">
-        <div className="border border-[#C5C5C5] w-[52%] mt-28 m-auto">
-          <div className="flex px-7 justify-between items-center">
-            <div className="w-[57%]">
               <h2 className="font-semibold text-[19px] mt-7">
                 Sign in to Salinaka
               </h2>
